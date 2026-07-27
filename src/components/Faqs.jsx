@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Faqs = () => {
   const faqsData = [
@@ -69,22 +70,30 @@ const Faqs = () => {
   ];
 
   const [openIndex, setOpenIndex] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const displayedFaqs = showAll ? faqsData : faqsData.slice(0, 8);
 
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-20 bg-[#FDFBF7] font-['Montserrat',sans-serif]">
+    <section className="py-24 px-4 md:px-8 lg:px-16 bg-[#FDFBF7] font-['Montserrat',sans-serif]">
       
-      {/* Centered Heading */}
-      <div className="text-center mb-16">
+      {/* HEADER SECTION */}
+      <motion.div 
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
         <h3 className="text-[11px] md:text-[13px] tracking-[0.3em] font-bold uppercase mb-4">
           <span className="text-[#C8A97E]">FREQUENTLY ASKED </span>
           <span className="text-[#4A1521]">QUESTIONS</span>
         </h3>
         
-        {/* Golden Ornamental Divider */}
         <div className="flex items-center justify-center gap-2">
           <div className="w-10 h-[1px] bg-[#C8A97E]/70"></div>
           <div className="flex gap-1">
@@ -94,56 +103,113 @@ const Faqs = () => {
           </div>
           <div className="w-10 h-[1px] bg-[#C8A97E]/70"></div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Premium 2-Column Grid */}
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6 items-start">
-        {faqsData.map((faq, index) => (
-          <div 
-            key={index} 
-            // Box hata kar sirf ek elegant bottom border lagaya hai
-            className="border-b border-[#C8A97E]/30 pb-2 transition-all duration-300"
+      {/* FAQS GRID */}
+      {/* Layout prop is added here to smoothly expand the grid when button is clicked */}
+      <motion.div 
+        layout 
+        className="max-w-[1300px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 items-start"
+      >
+        <AnimatePresence>
+          {displayedFaqs.map((faq, index) => {
+            // Naye aane wale FAQs ko delay dena taake wo ek sath jhatke se na ayen
+            const animationDelay = index > 7 ? (index - 8) * 0.08 : index * 0.08;
+
+            return (
+              <motion.div 
+                // key={index} ki jagah unique question string use kiya hai jo bug-free hai
+                key={faq.question}
+                layout 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.5, delay: animationDelay }}
+                
+                onMouseEnter={() => setOpenIndex(index)}
+                onClick={() => toggleFaq(index)}
+                
+                className={`bg-white rounded-md border transition-all duration-300 cursor-pointer overflow-hidden ${
+                  openIndex === index 
+                    ? 'border-[#C8A97E] shadow-[0_10px_30px_rgba(200,169,126,0.15)]' 
+                    : 'border-[#C8A97E]/20 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:border-[#C8A97E]/50'
+                }`}
+              >
+                
+                {/* Question Header */}
+                <div className="flex items-center justify-between p-5 md:p-6">
+                  <span className={`font-bold text-[12px] md:text-[13px] tracking-wide pr-4 transition-colors duration-300 ${
+                    openIndex === index ? 'text-[#C8A97E]' : 'text-[#4A1521]'
+                  }`}>
+                    {faq.question}
+                  </span>
+                  
+                  {/* Animated Plus/Minus Icon */}
+                  <div className={`flex-shrink-0 transition-transform duration-500 ${
+                    openIndex === index ? 'text-[#C8A97E] rotate-180' : 'text-[#C8A97E]/70'
+                  }`}>
+                    {openIndex === index ? (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 12H4" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 4v16m8-8H4" />
+                      </svg>
+                    )}
+                  </div>
+                </div>
+
+                {/* Expandable Answer */}
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <div className="px-5 md:px-6 pb-5 md:pb-6 text-[#666666] text-[12px] leading-[1.8] whitespace-pre-line border-t border-[#C8A97E]/10 pt-4 mt-1">
+                        {faq.answer}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* READ ALL FAQS BUTTON */}
+      {faqsData.length > 8 && (
+        <motion.div 
+          layout // Button bhi neechay smoothly slide hoga
+          className="flex justify-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <button 
+            onClick={() => setShowAll(!showAll)}
+            className="border border-[#C8A97E] text-[#4A1521] bg-transparent px-8 py-3.5 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-[#4A1521] hover:text-white hover:border-[#4A1521] transition-all duration-500 rounded-sm shadow-sm flex items-center gap-2"
           >
-            {/* FAQ Header / Question Button */}
-            <button
-              onClick={() => toggleFaq(index)}
-              className="w-full flex items-center justify-between py-4 text-left group"
+            {showAll ? "SHOW LESS FAQS" : "READ ALL FAQS"}
+            
+            {/* Arrow Icon */}
+            <svg 
+              className={`w-4 h-4 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
             >
-              <span className={`font-bold text-[12px] md:text-[13px] tracking-wide pr-4 transition-colors duration-300 ${
-                openIndex === index ? 'text-[#C8A97E]' : 'text-[#4A1521] group-hover:text-[#C8A97E]'
-              }`}>
-                {faq.question}
-              </span>
-              
-              {/* Premium Thin Line SVG Icons */}
-              <div className="flex-shrink-0 text-[#C8A97E] transition-transform duration-300 ml-2">
-                {openIndex === index ? (
-                  // Minus Icon
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M20 12H4" />
-                  </svg>
-                ) : (
-                  // Plus Icon
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M12 4v16m8-8H4" />
-                  </svg>
-                )}
-              </div>
-            </button>
-
-            {/* Expandable Answer */}
-            <div 
-              className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                openIndex === index ? 'max-h-[400px] opacity-100 pb-4' : 'max-h-0 opacity-0'
-              }`}
-            >
-              <div className="text-[#666666] text-[12px] leading-[1.8] whitespace-pre-line pr-8">
-                {faq.answer}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+        </motion.div>
+      )}
 
     </section>
   );
