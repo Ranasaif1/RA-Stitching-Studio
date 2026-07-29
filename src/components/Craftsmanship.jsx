@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Craftsmanship = () => {
   // Staggered Animations Setup
@@ -81,9 +82,12 @@ const Craftsmanship = () => {
 
         {/* Discover More Button */}
         <motion.div variants={itemVariants}>
-          <button className="border border-[#C8A97E] text-[#4A1521] bg-transparent px-8 py-4 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-[#4A1521] hover:text-white hover:border-[#4A1521] transition-all duration-500 rounded-sm shadow-sm hover:shadow-lg hover:-translate-y-1">
-            DISCOVER MORE
-          </button>
+          <Link
+            to="/about-us"
+            className="inline-block border border-[#C8A97E] text-[#4A1521] bg-transparent px-8 py-4 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-[#4A1521] hover:text-white hover:border-[#4A1521] transition-all duration-500 rounded-sm shadow-sm hover:shadow-lg hover:-translate-y-1"
+          >
+            DISCOVER More
+          </Link>
         </motion.div>
 
       </motion.div>

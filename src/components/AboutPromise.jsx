@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const OurPromise = () => {
   // Animations setup
@@ -18,7 +19,7 @@ const OurPromise = () => {
 
   return (
     <section className="w-full flex flex-col lg:flex-row items-center bg-[#FDFBF7] font-['Montserrat',sans-serif] overflow-hidden">
-      
+
       {/* Signature Font Import */}
       <style>
         {`
@@ -29,7 +30,7 @@ const OurPromise = () => {
       {/* ==========================================
           LEFT SIDE: Text Content
           ========================================== */}
-      <motion.div 
+      <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -38,12 +39,12 @@ const OurPromise = () => {
         // Mobile ke liye items-center aur text-center lagaya hai, large screens par items-start aur text-left hoga
         className="w-full lg:w-[45%] flex flex-col justify-center items-center text-center lg:items-start lg:text-left px-8 py-16 md:px-16 lg:pl-[10%] lg:pr-8 relative z-10"
       >
-        
+
         {/* Sub Heading */}
         <motion.h4 variants={itemVariants} className="text-[#C8A97E] text-[10px] md:text-[11px] tracking-[0.3em] font-bold uppercase mb-3">
           OUR PROMISE
         </motion.h4>
-        
+
         {/* Main Title */}
         <motion.h2 variants={itemVariants} className="font-['Cinzel',serif] text-3xl md:text-4xl lg:text-[42px] text-[#4A1521] leading-[1.15] mb-5 font-medium max-w-lg mx-auto lg:mx-0">
           Crafted With Passion, <br className="hidden md:block" /> Tailored With Love
@@ -69,9 +70,12 @@ const OurPromise = () => {
 
         {/* Discover Our Story Button */}
         <motion.div variants={itemVariants}>
-          <button className="border border-[#C8A97E] text-[#4A1521] bg-transparent px-8 py-4 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-[#4A1521] hover:text-white hover:border-[#4A1521] transition-all duration-500 rounded-sm shadow-sm hover:shadow-lg hover:-translate-y-1">
+          <Link
+            to="/about-us"
+            className="inline-block border border-[#C8A97E] text-[#4A1521] bg-transparent px-8 py-4 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase hover:bg-[#4A1521] hover:text-white hover:border-[#4A1521] transition-all duration-500 rounded-sm shadow-sm hover:shadow-lg hover:-translate-y-1"
+          >
             DISCOVER OUR STORY
-          </button>
+          </Link>
         </motion.div>
 
       </motion.div>
@@ -79,7 +83,7 @@ const OurPromise = () => {
       {/* ==========================================
           RIGHT SIDE: Framed Image
           ========================================== */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         // Image ki animation bhi tabhi chalegi jab ye visible hogi
@@ -88,10 +92,10 @@ const OurPromise = () => {
         className="w-full lg:w-[55%] p-6 md:p-16 lg:py-24 lg:pr-[8%] lg:pl-4"
       >
         <div className="relative p-3 bg-white shadow-2xl border border-[#C8A97E]/30 rounded-sm group hover:-translate-y-2 transition-transform duration-700">
-          
-          <img 
-            src="/image5.png" 
-            alt="Our Promise - Stitching Detail" 
+
+          <img
+            src="/image5.png"
+            alt="Our Promise - Stitching Detail"
             className="w-full h-[350px] md:h-[500px] lg:h-[650px] object-cover rounded-sm filter contrast-[1.05]"
           />
 
