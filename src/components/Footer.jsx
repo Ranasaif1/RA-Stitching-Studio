@@ -62,13 +62,17 @@ const Footer = () => {
             <ul className="space-y-3 text-[#D3C5C8] text-[12px] md:text-[14px]">
               {['Home', 'About Us', 'Services', 'Collections', 'Gallery', 'Pricing', 'Contact'].map((link, i) => (
                 <li key={i}>
-                  {/* About Us aur Home ke liye React Router ka Link use kiya hai */}
+                  {/* Home, About Us, aur Contact ke liye React Router ka Link use kiya hai */}
                   {link === 'About Us' ? (
                     <Link to="/about-us" className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
                       {link}
                     </Link>
                   ) : link === 'Home' ? (
                     <Link to="/" className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
+                      {link}
+                    </Link>
+                  ) : link === 'Contact' ? (
+                    <Link to="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
                       {link}
                     </Link>
                   ) : (
@@ -167,8 +171,8 @@ const Footer = () => {
         <div className="max-w-[1500px] mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between text-[11px] md:text-[12px] text-[#D3C5C8] tracking-wider font-medium">
           <p>© 2026 Zarvix Digital. All Rights Reserved.</p>
           <div className="flex gap-4 mt-3 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/PrivacyPolicy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/Terms" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </motion.div>

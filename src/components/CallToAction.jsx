@@ -21,7 +21,7 @@ const CallToAction = () => {
   return (
     <section 
       className="relative w-full py-32 md:py-40 bg-cover bg-center bg-fixed flex items-center justify-center font-['Montserrat',sans-serif] overflow-hidden"
-      style={{ backgroundImage: "url('/image1.png')" }}
+      style={{ backgroundImage: "url('/image20.png')" }}
     >
       
       {/* Dark Maroon Overlay with slight gradient for premium depth */}

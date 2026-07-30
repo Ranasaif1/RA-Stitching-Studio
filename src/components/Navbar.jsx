@@ -1,27 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-// React Router se Link import kiya hai
-import { Link, useLocation } from 'react-router-dom';
+// React Router se NavLink aur Link import kiya
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
-    const [activeLink, setActiveLink] = useState('HOME');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    
-    // Page track karne ke liye location use kar rahe hain
-    const location = useLocation();
 
     const navItems = ['HOME', 'ABOUT US', 'SERVICES', 'COLLECTIONS', 'GALLERY', 'CONTACT'];
 
-    // Jab page badlega toh Active Link khud set ho jayega
-    useEffect(() => {
-        if (location.pathname === '/about-us') {
-            setActiveLink('ABOUT US');
-        } else if (location.pathname === '/') {
-            setActiveLink('HOME');
-        }
-    }, [location.pathname]);
-
+    // Scroll Track
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
@@ -30,6 +18,7 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Mobile Menu Body Overflow
     useEffect(() => {
         if (isMobileMenuOpen) {
             document.body.style.overflow = 'hidden';
@@ -41,6 +30,8 @@ const Navbar = () => {
     const getLinkHref = (item) => {
         if (item === 'HOME') return '/';
         if (item === 'ABOUT US') return '/about-us';
+        if (item === 'CONTACT') return '/contact'; 
+        if (item === 'SERVICES') return '/Services';
         return `#${item.toLowerCase().replace(/\s+/g, '-')}`;
     };
 
@@ -56,8 +47,8 @@ const Navbar = () => {
             }`}
         >
             <div className="logo flex-shrink-0 relative z-50 flex items-center h-full">
-                {/* Logo par click karne se bhi Home page par chala jaye */}
-                <Link to="/" onClick={() => setActiveLink('HOME')}>
+                {/* Logo par normal Link theek hai */}
+                <Link to="/">
                     <img 
                         src="/logo.png" 
                         alt="Rana Abdullah Logo" 
@@ -83,37 +74,36 @@ const Navbar = () => {
                 <nav className="nav-menu flex items-center">
                     <ul className="flex items-center gap-6 xl:gap-8 m-0 p-0 list-none">
                         {navItems.map((item) => {
-                            const isPageLink = item === 'HOME' || item === 'ABOUT US';
+                            const isPageLink = item === 'HOME' || item === 'ABOUT US' || item === 'SERVICES' || item === 'CONTACT';
                             
                             return (
                                 <li key={item}>
-                                    {/* Agar Home ya About Us hai toh Link use karein bina refresh page change ke liye */}
                                     {isPageLink ? (
-                                        <Link
+                                        // Yahan ab NavLink ka use kiya gaya hai
+                                        <NavLink
                                             to={getLinkHref(item)}
-                                            onClick={() => setActiveLink(item)}
-                                            className={`relative text-[12px] xl:text-[13px] font-bold tracking-[1.5px] uppercase transition-colors duration-300 group py-2 ${
-                                                activeLink === item ? 'text-[#4A1521]' : 'text-[#4A1521] hover:text-[#C8A97E]'
-                                            }`}
+                                            className={({ isActive }) => 
+                                                `relative text-[12px] xl:text-[13px] font-bold tracking-[1.5px] uppercase transition-colors duration-300 group py-2 ${
+                                                    isActive ? 'text-[#4A1521]' : 'text-[#4A1521] hover:text-[#C8A97E]'
+                                                }`
+                                            }
                                         >
-                                            {item}
-                                            <span className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A97E] transition-transform duration-300 origin-center ${
-                                                activeLink === item ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                                            }`}></span>
-                                        </Link>
+                                            {({ isActive }) => (
+                                                <>
+                                                    {item}
+                                                    <span className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A97E] transition-transform duration-300 origin-center ${
+                                                        isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                                                    }`}></span>
+                                                </>
+                                            )}
+                                        </NavLink>
                                     ) : (
-                                        /* Baqi items ke liye normal anchor tag use karein */
                                         <a
                                             href={getLinkHref(item)}
-                                            onClick={() => setActiveLink(item)}
-                                            className={`relative text-[12px] xl:text-[13px] font-bold tracking-[1.5px] uppercase transition-colors duration-300 group py-2 ${
-                                                activeLink === item ? 'text-[#4A1521]' : 'text-[#4A1521] hover:text-[#C8A97E]'
-                                            }`}
+                                            className="relative text-[12px] xl:text-[13px] font-bold tracking-[1.5px] uppercase transition-colors duration-300 group py-2 text-[#4A1521] hover:text-[#C8A97E]"
                                         >
                                             {item}
-                                            <span className={`absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A97E] transition-transform duration-300 origin-center ${
-                                                activeLink === item ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-                                            }`}></span>
+                                            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#C8A97E] transition-transform duration-300 origin-center scale-x-0 group-hover:scale-x-100"></span>
                                         </a>
                                     )}
                                 </li>
@@ -159,7 +149,7 @@ const Navbar = () => {
                 
                 <ul className="flex flex-col items-center gap-6 w-full px-6 mt-10">
                     {navItems.map((item, index) => {
-                        const isPageLink = item === 'HOME' || item === 'ABOUT US';
+                        const isPageLink = item === 'HOME' || item === 'ABOUT US' || item === 'SERVICES' || item === 'CONTACT';
 
                         return (
                             <li 
@@ -172,36 +162,31 @@ const Navbar = () => {
                                 style={{ transitionDelay: isMobileMenuOpen ? `${index * 100 + 200}ms` : '0ms' }}
                             >
                                 {isPageLink ? (
-                                    <Link
+                                    <NavLink
                                         to={getLinkHref(item)}
-                                        onClick={() => {
-                                            setActiveLink(item);
-                                            setIsMobileMenuOpen(false);
-                                        }}
-                                        className={`text-2xl font-['Cinzel',serif] tracking-[0.1em] font-medium uppercase transition-colors duration-300 relative inline-block ${
-                                            activeLink === item ? 'text-[#C8A97E]' : 'text-[#4A1521]'
-                                        }`}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className={({ isActive }) => 
+                                            `text-2xl font-['Cinzel',serif] tracking-[0.1em] font-medium uppercase transition-colors duration-300 relative inline-block ${
+                                                isActive ? 'text-[#C8A97E]' : 'text-[#4A1521]'
+                                            }`
+                                        }
                                     >
-                                        {item}
-                                        {activeLink === item && (
-                                            <span className="absolute top-1/2 left-[-10px] right-[-10px] h-[1px] bg-[#C8A97E] -translate-y-1/2 opacity-50"></span>
+                                        {({ isActive }) => (
+                                            <>
+                                                {item}
+                                                {isActive && (
+                                                    <span className="absolute top-1/2 left-[-10px] right-[-10px] h-[1px] bg-[#C8A97E] -translate-y-1/2 opacity-50"></span>
+                                                )}
+                                            </>
                                         )}
-                                    </Link>
+                                    </NavLink>
                                 ) : (
                                     <a
                                         href={getLinkHref(item)}
-                                        onClick={() => {
-                                            setActiveLink(item);
-                                            setIsMobileMenuOpen(false);
-                                        }}
-                                        className={`text-2xl font-['Cinzel',serif] tracking-[0.1em] font-medium uppercase transition-colors duration-300 relative inline-block ${
-                                            activeLink === item ? 'text-[#C8A97E]' : 'text-[#4A1521]'
-                                        }`}
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="text-2xl font-['Cinzel',serif] tracking-[0.1em] font-medium uppercase transition-colors duration-300 relative inline-block text-[#4A1521]"
                                     >
                                         {item}
-                                        {activeLink === item && (
-                                            <span className="absolute top-1/2 left-[-10px] right-[-10px] h-[1px] bg-[#C8A97E] -translate-y-1/2 opacity-50"></span>
-                                        )}
                                     </a>
                                 )}
                             </li>

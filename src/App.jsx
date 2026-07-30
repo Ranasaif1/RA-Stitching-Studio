@@ -6,6 +6,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs'; 
+import Terms from './pages/Terms';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -24,6 +28,11 @@ function App() {
             
             {/* Jab link '/about-us' hoga toh AboutUs component chalega */}
             <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Services" element={<Services />} />
+
           </Routes>
         </main>
         
