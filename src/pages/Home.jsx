@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import HeroSection from '../components/HeroSection';
 import Services from '../components/Services';
 import AboutPromise from '../components/AboutPromise';
-import Collections from '../components/Collections';
+import Collections from '../components/HomeCollection';
 import Stats from '../components/Stats';
 import AboutSection from '../components/AboutSection';
 import OurProcess from '../components/OurProcess';

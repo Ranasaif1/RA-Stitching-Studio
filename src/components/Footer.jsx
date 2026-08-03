@@ -24,6 +24,35 @@ const Footer = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
 
+  // Helper function to determine if a link should use React Router or a standard anchor
+  const getLinkConfig = (linkName) => {
+    const routes = {
+      'Home': '/',
+      'About Us': '/about-us',
+      'Services': '/services',
+      'Collections': '/collections',
+      'Pricing': '/pricing',
+      'Contact': '/contact'
+    };
+
+    if (routes[linkName]) {
+      return { url: routes[linkName], isRouterLink: true };
+    }
+    // Fallback for sections that might just be anchor tags on the same page
+    return { url: `#${linkName.toLowerCase().replace(' ', '')}`, isRouterLink: false };
+  };
+
+  // Services ke exact URLs set kar diye hain
+  const servicesLinks = [
+    { name: 'BRIDAL COUTURE', path: '/service/bridal-couture' },
+    { name: 'LUXURY PRET', path: '/service/luxury-pret' },
+    { name: 'FORMAL WEAR', path: '/service/formal-wear' },
+    { name: 'CASUAL WEAR', path: '/service/casual-wear' },
+    { name: 'CUSTOM STITCHING', path: '/service/custom-stitching' },
+    { name: 'BOUTIQUE & BULK', path: '/service/boutique-bulk' },
+    { name: 'WESTERN COLLECTION', path: '/service/western-collection' }
+  ];
+
   return (
     <footer 
       className="relative font-['Montserrat',sans-serif] bg-cover bg-center border-t-4 border-[#C8A97E]"
@@ -60,28 +89,22 @@ const Footer = () => {
               QUICK LINKS
             </h4>
             <ul className="space-y-3 text-[#D3C5C8] text-[12px] md:text-[14px]">
-              {['Home', 'About Us', 'Services', 'Collections', 'Gallery', 'Pricing', 'Contact'].map((link, i) => (
-                <li key={i}>
-                  {/* Home, About Us, aur Contact ke liye React Router ka Link use kiya hai */}
-                  {link === 'About Us' ? (
-                    <Link to="/about-us" className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
-                      {link}
-                    </Link>
-                  ) : link === 'Home' ? (
-                    <Link to="/" className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
-                      {link}
-                    </Link>
-                  ) : link === 'Contact' ? (
-                    <Link to="/contact" className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
-                      {link}
-                    </Link>
-                  ) : (
-                    <a href={`#${link.toLowerCase().replace(' ', '')}`} className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
-                      {link}
-                    </a>
-                  )}
-                </li>
-              ))}
+              {['Home', 'About Us', 'Services', 'Collections', 'Pricing', 'Contact'].map((link, i) => {
+                const { url, isRouterLink } = getLinkConfig(link);
+                return (
+                  <li key={i}>
+                    {isRouterLink ? (
+                      <Link to={url} className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
+                        {link}
+                      </Link>
+                    ) : (
+                      <a href={url} className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
+                        {link}
+                      </a>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </motion.div>
 
@@ -91,11 +114,12 @@ const Footer = () => {
               OUR SERVICES
             </h4>
             <ul className="space-y-3 text-[#D3C5C8] text-[12px] md:text-[14px]">
-              {['Custom Stitching', 'Bridal Wear', 'Luxury Pret', 'Formal Wear', 'Alterations', 'Custom Measurements'].map((link, i) => (
+              {/* Yahan update kiya gaya hai */}
+              {servicesLinks.map((item, i) => (
                 <li key={i}>
-                  <a href="#services" className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
-                    {link}
-                  </a>
+                  <Link to={item.path} className="hover:text-white hover:translate-x-1 transition-all duration-300 inline-block font-medium">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -171,8 +195,8 @@ const Footer = () => {
         <div className="max-w-[1500px] mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between text-[11px] md:text-[12px] text-[#D3C5C8] tracking-wider font-medium">
           <p>© 2026 Zarvix Digital. All Rights Reserved.</p>
           <div className="flex gap-4 mt-3 md:mt-0">
-            <a href="/PrivacyPolicy" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="/Terms" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/PrivacyPolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/Terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
       </motion.div>
