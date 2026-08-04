@@ -34,7 +34,7 @@ const Craftsmanship = () => {
         <div className="relative p-3 bg-white shadow-2xl border border-[#C8A97E]/30 rounded-sm group hover:-translate-y-2 transition-transform duration-700">
           
           <img 
-            src="/image4.png" 
+            src="/image4.webp" 
             alt="Our Craftsmanship Detail" 
             className="w-full h-[350px] md:h-[500px] lg:h-[650px] object-cover rounded-sm filter contrast-[1.05]"
           />

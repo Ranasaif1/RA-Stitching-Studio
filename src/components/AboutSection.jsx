@@ -57,7 +57,7 @@ const AboutSection = () => {
 
                 {/* Right Side Watermark Image */}
                 <div className={`absolute -right-40 bottom-[-30px] top-10 flex items-center justify-end pointer-events-none pr-0 z-0 overflow-hidden transition-all duration-[1500ms] ease-out ${isVisibleDesktop ? 'translate-x-0 opacity-[0.9]' : 'translate-x-32 opacity-0'}`}>
-                    <img src="/image3.png" alt="Mannequin Watermark" className="h-[105%] w-auto object-contain translate-y-4" />
+                    <img src="/image3.webp" alt="Mannequin Watermark" className="h-[105%] w-auto object-contain translate-y-4" />
                 </div>
 
                 <div className="max-w-[1400px] mx-auto flex items-center justify-between gap-16 relative z-10">
@@ -65,7 +65,7 @@ const AboutSection = () => {
                     {/* Left Side: Image (Slides from LEFT) */}
                     <div className={`w-[45%] flex justify-start relative transform transition-all duration-1000 ease-out ${isVisibleDesktop ? 'translate-x-0 opacity-100' : '-translate-x-32 opacity-0'}`}>
                         <div className="relative p-3 bg-white shadow-2xl border border-[#C8A97E]/30 rounded-sm w-full max-w-[500px]">
-                            <img src="/image2.png" alt="Rana Abdullah Studio" className="w-full h-auto object-cover rounded-sm filter contrast-[1.05]" />
+                            <img src="/image2.webp" alt="Rana Abdullah Studio" className="w-full h-auto object-cover rounded-sm filter contrast-[1.05]" />
                             <div className={`absolute -bottom-6 -right-8 bg-[#4A1521] text-white p-6 rounded-sm shadow-xl border-l-4 border-[#C8A97E] transform transition-all duration-1000 delay-500 origin-bottom-right ${isVisibleDesktop ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
                                 <h4 className="font-['Cinzel',serif] text-4xl text-[#C8A97E] font-bold leading-none mb-1">30+</h4>
                                 <p className="text-xs tracking-[0.2em] font-medium uppercase m-0">Years of <br />Excellence</p>
@@ -142,7 +142,7 @@ const AboutSection = () => {
                         {/* Slide 1: Image & Badge */}
                         <div className="w-[84vw] md:w-[60vw] flex-shrink-0 flex justify-center">
                             <div className="relative p-2 bg-white shadow-2xl border border-[#C8A97E]/30 rounded-sm w-full">
-                                <img src="/image2.png" alt="Rana Abdullah Studio" className="w-full h-auto object-cover rounded-sm filter contrast-[1.05]" />
+                                <img src="/image2.webp" alt="Rana Abdullah Studio" className="w-full h-auto object-cover rounded-sm filter contrast-[1.05]" />
                                 <div className="absolute -bottom-5 -right-2 bg-[#4A1521] text-white p-4 rounded-sm shadow-xl border-l-4 border-[#C8A97E]">
                                     <h4 className="font-['Cinzel',serif] text-3xl text-[#C8A97E] font-bold leading-none mb-1">30+</h4>
                                     <p className="text-[10px] tracking-[0.2em] font-medium uppercase m-0">Years of <br />Excellence</p>

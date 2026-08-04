@@ -119,7 +119,7 @@ const TailoringExpectations = () => {
                     >
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                         <img 
-                            src="/image22.png" 
+                            src="/image22.webp" 
                             alt="Master Tailoring Craftsmanship" 
                             className="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110" 
                         />
@@ -134,7 +134,7 @@ const TailoringExpectations = () => {
                         >
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                             <img 
-                                src="/image23.png" 
+                                src="/image23.webp" 
                                 alt="Premium Fabric Detailing" 
                                 className="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110" 
                             />
@@ -147,7 +147,7 @@ const TailoringExpectations = () => {
                         >
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                             <img 
-                                src="/image24.png" 
+                                src="/image24.webp" 
                                 alt="Exceptional Finishing" 
                                 className="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110" 
                             />

@@ -36,7 +36,7 @@ const ManufacturingPartner = () => {
                     {/* Dark luxury overlay that fades on hover */}
                     <div className="absolute inset-0 bg-[#4A1521]/10 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none"></div>
                     <img 
-                        src="/image27.png" 
+                        src="/image27.webp" 
                         alt="Manufacturing Partner" 
                         className="w-full h-full object-cover transform transition-transform duration-1000 ease-out group-hover:scale-105" 
                     />

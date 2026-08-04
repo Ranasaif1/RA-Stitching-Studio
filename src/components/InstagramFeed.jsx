@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 
 const InstagramFeed = () => {
   const feedImages = [
-    { img: "/image9.png", likes: "1.2k" },
-    { img: "/image4.png", likes: "950" },
-    { img: "/image5.png", likes: "2.1k" },
-    { img: "/image6.png", likes: "1.8k" },
-    { img: "/image7.png", likes: "3.4k" },
+    { img: "/image9.webp", likes: "1.2k" },
+    { img: "/image4.webp", likes: "950" },
+    { img: "/image5.webp", likes: "2.1k" },
+    { img: "/image6.webp", likes: "1.8k" },
+    { img: "/image7.webp", likes: "3.4k" },
     { img: "/image8.png", likes: "890" },
   ];
 

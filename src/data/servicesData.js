@@ -4,12 +4,12 @@ export const servicesData = {
         title: "LUXURY PRET",
         subtitle: "Ready to Wear, Designed to Impress",
         heroDesc: "Experience effortless elegance with our Luxury Pret collection, where timeless fashion meets exceptional craftsmanship. Designed for women who appreciate sophistication in everyday style, our ready-to-wear outfits combine premium fabrics, refined silhouettes, and flawless tailoring to create garments that are both comfortable and luxurious. Whether you're attending a family gathering, festive celebration, business event, or an intimate dinner, every outfit is thoughtfully designed to help you look confident, graceful, and effortlessly stylish.",
-        heroImg: "/image9.png",
+        heroImg: "/image9.webp",
         
         aboutTitle: "Elegance You Can Wear Every Day",
         aboutDesc1: "Luxury Pret is created for women who seek premium fashion without the wait of couture production. Every design reflects our commitment to quality, precision, and timeless aesthetics while maintaining the convenience of ready-to-wear luxury.",
         aboutDesc2: "At Rana Abdullah Stitching Studio, each pret outfit is carefully designed using premium fabrics, elegant color palettes, and refined tailoring techniques that have been perfected through more than three decades of experience. Whether you're looking for an elegant ensemble for Eid, a graceful outfit for family gatherings, or a luxurious design for formal dinners, our Luxury Pret collection delivers timeless beauty that complements your lifestyle.",
-        aboutImg: "/image10.png",
+        aboutImg: "/image10.webp",
 
         whyChooseTitle: "Why Choose Our Luxury Pret",
         whyChooseUs: [
@@ -60,12 +60,12 @@ export const servicesData = {
         title: "BRIDAL COUTURE",
         subtitle: "Bespoke Luxury - Where Your Dream Bridal Dress Becomes Reality",
         heroDesc: "Your wedding day is one of life's most treasured moments, and your bridal outfit should be nothing less than extraordinary. At Rana Abdullah Stitching Studio, we specialize in creating bespoke bridal couture that celebrates elegance, individuality, and timeless craftsmanship. Every bridal ensemble is handcrafted with passion using luxurious fabrics, intricate embroidery, delicate embellishments, and precision tailoring to create a masterpiece that reflects your unique story. With a proud family legacy spanning more than 30 years, we combine traditional tailoring techniques with modern couture artistry to ensure every bride walks into her special day with confidence, grace, and unforgettable beauty.",
-        heroImg: "/image7.png",
+        heroImg: "/image7.webp",
         
         aboutTitle: "A Bridal Experience Designed Around You",
         aboutDesc1: "Every bride has a different vision, and every wedding deserves a gown that is as unique as the woman wearing it. Our bridal couture journey begins with understanding your personality, wedding theme, cultural traditions, and style preferences. We believe the perfect bridal dress is not selected—it is carefully designed and handcrafted exclusively for you.",
         aboutDesc2: "From the initial consultation to the final fitting, our experienced designers and master craftsmen work closely with you to perfect every detail. Whether you dream of a traditional bridal ensemble adorned with rich embroidery or a contemporary luxury silhouette with refined elegance, we transform your inspiration into a timeless creation that exceeds expectations. Every stitch is completed with patience, precision, and uncompromising attention to detail, ensuring your bridal outfit becomes a cherished memory for years to come.",
-        aboutImg: "/image8.png",
+        aboutImg: "/image8.webp",
 
         whyChooseTitle: "Why Choose Our Bridal Couture",
         whyChooseUs: [
@@ -119,12 +119,12 @@ export const servicesData = {
         title: "FORMAL WEAR",
         subtitle: "Elegant Occasions - Timeless Elegance for Every Special Occasion",
         heroDesc: "Every special occasion deserves an outfit that reflects confidence, sophistication, and impeccable style. At Rana Abdullah Stitching Studio, our Formal Wear collection is thoughtfully designed for women who appreciate luxury, elegance, and flawless craftsmanship. From weddings and engagement ceremonies to corporate events, festive celebrations, and exclusive gatherings, every outfit is tailored to make you look and feel exceptional. With over 30 years of tailoring excellence, we combine premium fabrics, elegant silhouettes, refined embroidery, and meticulous attention to detail to create formal wear that leaves a lasting impression wherever you go.",
-        heroImg: "/image11.png",
+        heroImg: "/image11.webp",
 
         aboutTitle: "Designed to Make Every Moment Memorable",
         aboutDesc1: "Every woman has her own unique sense of style, and our formal wear collection is created to celebrate that individuality. Whether you envision a graceful traditional outfit, a sophisticated modern silhouette, or an elegant fusion of classic and contemporary fashion, our experienced designers work closely with you to bring your ideas to life.",
         aboutDesc2: "Each garment is carefully tailored using luxurious fabrics, precision stitching, and refined finishing techniques that have been perfected through generations of craftsmanship. From the first consultation to the final fitting, every detail is thoughtfully considered to ensure your outfit complements both your personality and the occasion. At Rana Abdullah Stitching Studio, formal wear is more than clothing—it is a statement of elegance, confidence, and timeless beauty.",
-        aboutImg: "/image12.png",
+        aboutImg: "/image12.webp",
 
         whyChooseTitle: "Why Choose Our Formal Wear",
         whyChooseUs: [
@@ -178,12 +178,12 @@ export const servicesData = {
         title: "CUSTOM STITCHING",
         subtitle: "Made for You - Tailored to Your Style. Crafted to Perfection.",
         heroDesc: "Every individual has a unique personality, and every outfit should reflect that uniqueness. At Rana Abdullah Stitching Studio, our Custom Stitching service is designed to transform your ideas into beautifully handcrafted garments tailored exclusively for you. Whether you have a specific design in mind, a favorite fabric, or inspiration from a fashion collection, our experienced designers and master tailors bring your vision to life with precision, elegance, and exceptional craftsmanship. With over 30 years of tailoring excellence, we combine traditional techniques with modern fashion to create garments that fit perfectly, feel comfortable, and showcase timeless sophistication.",
-        heroImg: "/image27.png",
+        heroImg: "/image27.webp",
         
         aboutTitle: "Your Vision. Our Craftsmanship.",
         aboutDesc1: "At Rana Abdullah Stitching Studio, we believe true luxury lies in personalization. Our Custom Stitching service begins with understanding your ideas, lifestyle, occasion, and fashion preferences before carefully planning every detail of your garment.",
         aboutDesc2: "From selecting premium fabrics and designing elegant silhouettes to precise measurements and flawless finishing, every step is handled with dedication and attention to detail. Our experienced artisans ensure every stitch reflects quality, precision, and the legacy of craftsmanship that our family has proudly maintained for over three decades. Whether you're creating a bridal outfit, formal attire, casual wear, western dress, or a completely original design, we tailor every piece exclusively for you, ensuring it becomes a timeless addition to your wardrobe.",
-        aboutImg: "/image28.png",
+        aboutImg: "/image28.webp",
 
         whyChooseTitle: "Why Choose Our Custom Stitching",
         whyChooseUs: [
@@ -238,12 +238,12 @@ export const servicesData = {
         title: "CASUAL WEAR",
         subtitle: "Everyday Luxury - Effortless Style for Everyday Living",
         heroDesc: "True elegance isn't reserved only for special occasions—it should be a part of your everyday life. At Rana Abdullah Stitching Studio, our Casual Wear collection is thoughtfully designed for women who appreciate comfort, quality, and timeless fashion. Every outfit is tailored to provide the perfect balance between relaxed wearability and refined sophistication, allowing you to feel confident wherever your day takes you. With over 30 years of tailoring excellence, we transform everyday clothing into premium garments using carefully selected fabrics, precise tailoring, and exceptional finishing. Whether you're spending time with family, attending casual gatherings, running daily errands, or simply enjoying a comfortable day out, our casual wear is designed to make every moment stylish and effortless.",
-        heroImg: "/image13.png",
+        heroImg: "/image13.webp",
         
         aboutTitle: "Designed for Comfort. Crafted with Elegance.",
         aboutDesc1: "At Rana Abdullah Stitching Studio, we believe everyday fashion deserves the same attention to detail as luxury couture. Our Casual Wear collection combines breathable premium fabrics, clean silhouettes, and flawless tailoring to create garments that are both practical and sophisticated.",
         aboutDesc2: "Every design is thoughtfully created to complement your lifestyle while offering unmatched comfort throughout the day. From modern cuts and graceful patterns to refined stitching and elegant finishing, each outfit reflects our family's commitment to craftsmanship and quality. Whether you prefer minimalist designs, soft neutral tones, or contemporary styles with subtle detailing, our experienced designers create casual outfits that perfectly match your personality while ensuring effortless elegance every day.",
-        aboutImg: "/image14.png",
+        aboutImg: "/image14.webp",
 
         whyChooseTitle: "Why Choose Our Casual Wear",
         whyChooseUs: [
@@ -296,12 +296,12 @@ export const servicesData = {
         title: "BOUTIQUE & BULK ORDERS",
         subtitle: "Professional Manufacturing - Trusted Production Partner for Boutiques & Fashion Brands",
         heroDesc: "At Rana Abdullah Stitching Studio, we understand that successful fashion brands require more than beautiful designs—they need a manufacturing partner they can trust. With over 30 years of tailoring excellence, we proudly provide professional boutique and bulk stitching services for boutiques, fashion designers, clothing brands, retailers, and entrepreneurs looking for consistent quality, timely production, and exceptional craftsmanship. Whether you're launching your first collection or expanding an established fashion label, our experienced production team delivers garments that reflect the highest standards of precision, quality, and luxury.",
-        heroImg: "/image25.png",
+        heroImg: "/image25.webp",
         
         aboutTitle: "Manufacturing Excellence Built on Experience",
         aboutDesc1: "Every successful fashion collection begins with reliable production. At Rana Abdullah Stitching Studio, we combine traditional tailoring expertise with modern production techniques to manufacture garments that meet the expectations of today's competitive fashion industry.",
         aboutDesc2: "Our skilled craftsmen carefully handle every stage of production—from pattern development and fabric preparation to stitching, quality inspection, and final finishing. We understand the importance of consistency, accurate sizing, premium finishing, and timely delivery, allowing you to focus on growing your brand while we take care of production. Whether you require a small boutique collection or a large production order, our team is committed to maintaining the same level of craftsmanship and attention to detail for every garment.",
-        aboutImg: "/image25.png",
+        aboutImg: "/image25.webp",
 
         whyChooseTitle: "Why Choose Our Boutique & Bulk Manufacturing",
         whyChooseUs: [
@@ -356,12 +356,12 @@ export const servicesData = {
         title: "WESTERN COLLECTION",
         subtitle: "Contemporary Luxury - Modern Fashion Tailored to Perfection",
         heroDesc: "Fashion is constantly evolving, but true elegance never goes out of style. At Rana Abdullah Stitching Studio, our Western Collection combines modern international fashion with timeless tailoring expertise to create sophisticated garments for women who appreciate luxury, confidence, and individuality. From elegant evening gowns and cocktail dresses to chic maxi dresses, formal western wear, jumpsuits, and contemporary silhouettes, every piece is thoughtfully designed using premium fabrics and tailored with exceptional precision. With over 30 years of craftsmanship, we create western outfits that offer the perfect balance of comfort, style, and flawless fitting.",
-        heroImg: "/image29.png",
+        heroImg: "/image29.webp",
         
         aboutTitle: "Designed for the Modern Woman",
         aboutDesc1: "Our Western Collection is created for women who want fashion that reflects confidence, sophistication, and effortless elegance. Every design is tailored according to your personal style, body measurements, and the occasion you're dressing for. Whether you're attending a corporate event, engagement party, graduation ceremony, formal dinner, birthday celebration, or simply refreshing your wardrobe, our experienced designers work closely with you to create garments that perfectly complement your personality.",
         aboutDesc2: "From clean minimalist silhouettes to statement evening gowns with luxurious detailing, every outfit reflects our commitment to exceptional craftsmanship, premium quality, and timeless design.",
-        aboutImg: "/image29.png",
+        aboutImg: "/image29.webp",
 
         whyChooseTitle: "Why Choose Our Western Collection",
         whyChooseUs: [

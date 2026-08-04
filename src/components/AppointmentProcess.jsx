@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 
 const AppointmentProcess = () => {
     const steps = [
-        { title: "Discuss Your Vision", desc: "Share your ideas, inspirations, preferred style, event details, and expectations.", img: "/image_c2e1f3.jpg" }, // Add appropriate timeline images
-        { title: "Fabric & Design Selection", desc: "Explore our premium fabric collection, embroidery samples, and design options.", img: "/image22.png" },
-        { title: "Measurements & Fitting", desc: "Our experts will take accurate body measurements to ensure a flawless result.", img: "/image23.png" },
-        { title: "Craftsmanship Begins", desc: "Our artisans begin carefully crafting your garment using premium materials.", img: "/image24.png" },
-        { title: "Final Trial & Delivery", desc: "Attend your fitting session, review every detail, and receive your finished garment.", img: "/image28.png" }
+        { title: "Discuss Your Vision", desc: "Share your ideas, inspirations, preferred style, event details, and expectations.", img: "/image21.webp" }, // Add appropriate timeline images
+        { title: "Fabric & Design Selection", desc: "Explore our premium fabric collection, embroidery samples, and design options.", img: "/image22.webp" },
+        { title: "Measurements & Fitting", desc: "Our experts will take accurate body measurements to ensure a flawless result.", img: "/image23.webp" },
+        { title: "Craftsmanship Begins", desc: "Our artisans begin carefully crafting your garment using premium materials.", img: "/image24.webp" },
+        { title: "Final Trial & Delivery", desc: "Attend your fitting session, review every detail, and receive your finished garment.", img: "/image28.webp" }
     ];
 
     return (

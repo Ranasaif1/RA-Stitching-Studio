@@ -47,7 +47,7 @@ const HeritageSection = () => {
                             <div className="rounded-t-full overflow-hidden relative group h-[450px] md:h-[600px]">
                                 <div className="absolute inset-0 bg-[#4A1521]/10 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none"></div>
                                 <img 
-                                    src="/image22.png" 
+                                    src="/image22.webp" 
                                     alt="Signature Collection" 
                                     className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" 
                                 />
@@ -87,7 +87,7 @@ const HeritageSection = () => {
                             className="p-2 bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border border-[#C8A97E]/20"
                         >
                             <img 
-                                src="/image23.png" 
+                                src="/image23.webp" 
                                 alt="Detail shot" 
                                 className="w-full h-[200px] md:h-[280px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500" 
                             />

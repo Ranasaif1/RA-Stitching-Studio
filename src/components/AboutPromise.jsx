@@ -94,7 +94,7 @@ const OurPromise = () => {
         <div className="relative p-3 bg-white shadow-2xl border border-[#C8A97E]/30 rounded-sm group hover:-translate-y-2 transition-transform duration-700">
 
           <img
-            src="/image5.png"
+            src="/image5.webp"
             alt="Our Promise - Stitching Detail"
             className="w-full h-[350px] md:h-[500px] lg:h-[650px] object-cover rounded-sm filter contrast-[1.05]"
           />

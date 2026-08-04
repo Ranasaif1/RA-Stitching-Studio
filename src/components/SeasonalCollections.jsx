@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 
 const SeasonalCollections = () => {
     const seasonalData = [
-        { title: "Wedding Couture", img: "/image13.png" },
-        { title: "Festive Collection", img: "/image10.png" },
-        { title: "Eid Collection", img: "/image11.png" },
-        { title: "Luxury Formals", img: "/image12.png" },
-        { title: "Signature Pret", img: "/image14.png" },
-        { title: "Everyday Elegance", img: "/image15.png" }
+        { title: "Wedding Couture", img: "/image13.webp" },
+        { title: "Festive Collection", img: "/image10.webp" },
+        { title: "Eid Collection", img: "/image11.webp" },
+        { title: "Luxury Formals", img: "/image12.webp" },
+        { title: "Signature Pret", img: "/image14.webp" },
+        { title: "Everyday Elegance", img: "/image15.webp" }
     ];
 
     // --- Animation Variants ---

@@ -4,10 +4,10 @@ export const collectionsData = {
         title: "BRIDAL WEAR",
         subtitle: "The Royal Collection",
         description: "Explore our exclusive handcrafted bridal masterpieces. Every dress is a unique story of elegance, tradition, and luxury.",
-        coverImg: "/image6.png", // Page ke top par jo bari image aayegi
+        coverImg: "/image6.webp", // Page ke top par jo bari image aayegi
         images: [
-            "/g1.png", "/g2.png", "/g3.png", 
-            "/g4.png", "/g5.png", "/g6.png"
+            "/g1.webp", "/g2.webp", "/g3.webp", 
+            "/g4.webp", "/g5.webp", "/g6.webp"
         ] // Yahan aap jitni marzi images ke links daal sakte hain
     },
     "luxury-pret": {
@@ -15,11 +15,11 @@ export const collectionsData = {
         title: "LUXURY PRET",
         subtitle: "Ready to Wear Elegance",
         description: "Sophisticated ready-to-wear designs that perfectly balance traditional artistry and modern contemporary aesthetics.",
-        coverImg: "/image9.png",
+        coverImg: "/image9.webp",
         images: [
-            "/p1.png", "/p2.png", "/p3.png", 
-            "/p4.png", "/p5.png", "/p6.png",
-            "/p7.png", "/p8.png"
+            "/p1.webp", "/p2.webp", "/p3.webp", 
+            "/p4.webp", "/p5.webp", "/p6.webp",
+            "/p7.webp", "/p8.webp"
         ]
     },
     "formal-wear": {
@@ -27,10 +27,10 @@ export const collectionsData = {
         title: "FORMAL WEAR",
         subtitle: "Timeless Occasion Wear",
         description: "Elegant evening ensembles and perfectly tailored formals designed to make you stand out at every luxury occasion.",
-        coverImg: "/image7.png",
+        coverImg: "/image7.webp",
         images: [
-            "/f1.png", "/f2.png", "/f3.png", 
-            "/f4.png"
+            "/f1.webp", "/f2.webp", "/f3.webp", 
+            "/f4.webp"
         ]
     },
     "casual-wear": {

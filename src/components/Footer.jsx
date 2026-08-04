@@ -56,7 +56,7 @@ const Footer = () => {
   return (
     <footer 
       className="relative font-['Montserrat',sans-serif] bg-cover bg-center border-t-4 border-[#C8A97E]"
-      style={{ backgroundImage: "url('/image1.png')" }}
+      style={{ backgroundImage: "url('/image1.webp')" }}
     >
       
       {/* Dark Maroon Overlay */}

@@ -21,7 +21,7 @@ const HeroSection = () => {
         <section 
             // bg-[65%_center] se image properly right side par shift hogi taake larki ka face center/right par clear dikhe
             className="relative w-full min-h-screen bg-cover bg-[65%_center] md:bg-right bg-no-repeat flex items-center font-['Montserrat',sans-serif] overflow-hidden"
-            style={{ backgroundImage: "url('/image1.png')" }}
+            style={{ backgroundImage: "url('/image1.webp')" }}
         >
             
             {/* 

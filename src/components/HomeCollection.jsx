@@ -7,13 +7,13 @@ const Collections = () => {
     { 
       id: "bridal-wear",
       title: "Bridal Wear", 
-      img: "/image6.png",
+      img: "/image6.webp",
       desc: "Exquisite handcrafted bridal dresses featuring luxurious embellishments, intricate embroidery, and timeless silhouettes for your special day."
     },
     { 
       id: "formal-wear",
       title: "Formal Wear", 
-      img: "/image7.png",
+      img: "/image7.webp",
       desc: "Elegant evening ensembles and perfectly tailored formals designed to make you stand out at every luxury occasion."
     },
     { 
@@ -25,20 +25,20 @@ const Collections = () => {
     { 
       id: "luxury-pret",
       title: "Luxury Pret", 
-      img: "/image9.png",
+      img: "/image9.webp",
       desc: "Sophisticated ready-to-wear designs that perfectly balance traditional artistry and modern contemporary aesthetics."
     },
     { 
       id: "western-collection",
       title: "Western Collection", 
-      img: "/image29.png", 
+      img: "/image29.webp", 
       desc: "Chic and contemporary western silhouettes, tailored to perfection for a bold, modern, and confident look."
     },
     { 
       // Agar inka data nahi banaya, toh inki alag id de dein
       id: "boutique-collection",
       title: "Boutique Collection", 
-      img: "/image31.png", 
+      img: "/image31.webp", 
       desc: "Exclusive, limited-edition pieces curated specially for boutiques and the ultimate fashion-forward wardrobe."
     },
     { 

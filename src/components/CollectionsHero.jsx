@@ -14,7 +14,7 @@ const CollectionsHero = () => {
             // 🚨 FIX: "h-[85vh]" hata kar "min-h-screen" aur "py-28 lg:py-0" lagaya hai 
             // taake mobile par content ke hisab se height khud adjust ho.
             className="relative w-full min-h-screen py-28 lg:py-0 bg-cover bg-[75%_center] lg:bg-right bg-no-repeat flex items-center font-['Montserrat',sans-serif] overflow-hidden"
-            style={{ backgroundImage: "url('/image28.png')" }}
+            style={{ backgroundImage: "url('/image28.webp')" }}
         >
             
             {/* Gradient Overlay */}

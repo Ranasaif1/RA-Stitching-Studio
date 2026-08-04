@@ -3,10 +3,10 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const SignatureCollections = () => {
   const collectionsData = [
-    { title: "WEDDING COUTURE", img: "/image13.png" },
-    { title: "WESTERN COLLECTION", img: "/image29.png" },
-    { title: "EID COLLECTION", img: "/image12.png" },
-    { title: "PARTY WEAR", img: "/image10.png" }
+    { title: "WEDDING COUTURE", img: "/image13.webp" },
+    { title: "WESTERN COLLECTION", img: "/image29.webp" },
+    { title: "EID COLLECTION", img: "/image12.webp" },
+    { title: "PARTY WEAR", img: "/image10.webp" }
   ];
 
   // ==========================================

@@ -4,13 +4,13 @@ import SectionHeader from './SectionHeader';
 
 const SignatureServices = () => {
     const signatureServices = [
-        { title: "BRIDAL COUTURE", badge: "Bespoke Luxury", desc: "Handcrafted bridal dresses using luxurious fabrics, intricate embroidery, and delicate embellishments to create a masterpiece that reflects your unique story and elegance.", img: "/image13.png" },
-        { title: "LUXURY PRET", badge: "Ready to Wear", desc: "Sophisticated pret wear collection that blends premium fabrics, refined silhouettes, and exceptional craftsmanship for effortless elegance in every look.", img: "/image9.png" },
-        { title: "FORMAL WEAR", badge: "Elegant Occasions", desc: "Custom-designed formal outfits tailored to perfection. Every detail is carefully crafted to make your special moments even more memorable.", img: "/image11.png" },
-        { title: "CASUAL WEAR", badge: "Everyday Luxury", desc: "Comfort meets elegance in our custom casual wear. Premium fabrics, perfect stitching, and attention to detail for your everyday style and comfort.", img: "/image7.png" },
-        { title: "CUSTOM STITCHING", badge: "Made for You", desc: "From consultation to final fitting, we create outfits according to your exact measurements, preferred fabrics, and personal style to make every piece uniquely yours.", img: "/image26.png" },
-        { title: "BOUTIQUE & BULK", badge: "Bulk Manufacturing", desc: "Professional bulk stitching services for boutiques, designers, and fashion brands with consistent quality and reliable production timelines.", img: "/image25.png" },
-        { title: "WESTERN WEAR", badge: "Contemporary Luxury", desc: "Modern silhouettes crafted with premium fabrics, flawless tailoring, and elegant finishing. From evening gowns and cocktail dresses to chic contemporary outfits, every piece is custom designed to reflect your confidence, sophistication, and personal style.", img: "/image29.png" }
+        { title: "BRIDAL COUTURE", badge: "Bespoke Luxury", desc: "Handcrafted bridal dresses using luxurious fabrics, intricate embroidery, and delicate embellishments to create a masterpiece that reflects your unique story and elegance.", img: "/image13.webp" },
+        { title: "LUXURY PRET", badge: "Ready to Wear", desc: "Sophisticated pret wear collection that blends premium fabrics, refined silhouettes, and exceptional craftsmanship for effortless elegance in every look.", img: "/image9.webp" },
+        { title: "FORMAL WEAR", badge: "Elegant Occasions", desc: "Custom-designed formal outfits tailored to perfection. Every detail is carefully crafted to make your special moments even more memorable.", img: "/image11.webp" },
+        { title: "CASUAL WEAR", badge: "Everyday Luxury", desc: "Comfort meets elegance in our custom casual wear. Premium fabrics, perfect stitching, and attention to detail for your everyday style and comfort.", img: "/image7.webp" },
+        { title: "CUSTOM STITCHING", badge: "Made for You", desc: "From consultation to final fitting, we create outfits according to your exact measurements, preferred fabrics, and personal style to make every piece uniquely yours.", img: "/image26.webp" },
+        { title: "BOUTIQUE & BULK", badge: "Bulk Manufacturing", desc: "Professional bulk stitching services for boutiques, designers, and fashion brands with consistent quality and reliable production timelines.", img: "/image25.webp" },
+        { title: "WESTERN WEAR", badge: "Contemporary Luxury", desc: "Modern silhouettes crafted with premium fabrics, flawless tailoring, and elegant finishing. From evening gowns and cocktail dresses to chic contemporary outfits, every piece is custom designed to reflect your confidence, sophistication, and personal style.", img: "/image29.webp" }
     ];
 
     // --- Animation Variants ---

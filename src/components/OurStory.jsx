@@ -58,7 +58,7 @@ const OurStory = () => {
             </div>
             
             <img 
-              src="/image18.png" 
+              src="/image18.webp" 
               alt="Rana Ilyas Tailoring" 
               className="w-full h-auto object-cover shadow-xl grayscale sepia-[0.3] group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-700 ease-in-out" 
             />
@@ -67,7 +67,7 @@ const OurStory = () => {
           {/* IMAGE 2: Middle Left (HIDDEN ON MOBILE: 'hidden lg:block') */}
           <div className="hidden lg:block relative self-start w-[85%] md:w-[75%] border-[6px] md:border-8 border-[#FDFBF7] shadow-xl group z-20">
             <img 
-              src="/image15.png" 
+              src="/image15.webp" 
               alt="Craftsmanship" 
               className="w-full h-auto object-cover grayscale sepia-[0.3] group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-700 ease-in-out" 
             />
@@ -76,7 +76,7 @@ const OurStory = () => {
           {/* IMAGE 3: Bottom Right (HIDDEN ON MOBILE: 'hidden lg:block') */}
           <div className="hidden lg:block relative self-end w-[70%] md:w-[55%] border-[6px] md:border-8 border-[#FDFBF7] shadow-xl group z-20 mr-2 md:mr-8">
             <img 
-              src="/image16.png" 
+              src="/image16.webp" 
               alt="Premium Details" 
               className="w-full h-auto object-cover grayscale sepia-[0.3] group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-700 ease-in-out" 
             />
