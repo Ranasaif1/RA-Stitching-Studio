@@ -255,7 +255,7 @@ const Terms = () => {
           {/* Left Image */}
           <div className="w-full md:w-[40%] lg:w-[45%] relative">
             <img 
-              src="/image20.png" 
+              src="/image20.webp" 
               alt="Assistance" 
               className="w-full h-56 sm:h-72 md:h-full object-cover object-center"
             />

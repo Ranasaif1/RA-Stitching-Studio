@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
         {/* Background Image - 100% Original Colors */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/image21.png" 
+            src="/image21.webp" 
             alt="Privacy Background" 
             className="w-full h-full object-cover object-center" 
           />
@@ -250,7 +250,7 @@ const PrivacyPolicy = () => {
           {/* Left Image */}
           <div className="w-full md:w-[40%] lg:w-[45%] relative">
             <img 
-              src="/image20.png" 
+              src="/image20.webp" 
               alt="Assistance" 
               className="w-full h-56 sm:h-72 md:h-full object-cover object-center"
             />

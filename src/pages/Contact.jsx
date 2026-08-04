@@ -76,7 +76,7 @@ const Contact = () => {
             <section className="relative w-full h-screen flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/image21.png"
+                        src="/image21.webp"
                         alt="Contact Background"
                         className="w-full h-full object-cover object-center"
                     />
@@ -423,7 +423,7 @@ const Contact = () => {
                 ========================================== */}
             <section 
                 className="relative w-full py-20 md:py-28 px-4 overflow-hidden flex flex-col items-center justify-center bg-fixed bg-cover bg-center"
-                style={{ backgroundImage: `url('/image20.png')` }}
+                style={{ backgroundImage: `url('/image20.webp')` }}
             >
                 {/* Dark Maroon Overlay matching the reference */}
                 <div className="absolute inset-0 bg-[#3A0F18]/60 z-0"></div>

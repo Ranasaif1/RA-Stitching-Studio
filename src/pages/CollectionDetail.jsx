@@ -93,7 +93,7 @@ const CollectionDetail = () => {
                                 className="w-full h-auto object-cover transform transition-transform duration-[1.5s] ease-out group-hover:scale-110"
                                 onError={(e) => {
                                     e.target.onerror = null;
-                                    e.target.src = '/image1.png'; // Fallback image agar link toot jaye
+                                    e.target.src = '/image1.webp'; // Fallback image agar link toot jaye
                                 }}
                             />
                         </motion.div>
