@@ -14,7 +14,6 @@ const ServiceHero = () => {
     const services = [
         "Bespoke Bridal Couture",
         "Luxury Pret Collection",
-        "Custom Formal Wear",
         "Boutique Bulk Production"
     ];
 
@@ -29,7 +28,7 @@ const ServiceHero = () => {
               Luxury White/Cream Gradient Overlay 
               - Mobile par width sirf 60% rakhi hai taake right side (larki ka face) bilkul clear rahay
             */}
-            <div className="absolute inset-y-0 left-0 w-[85%] md:w-[85%] lg:w-[70%] bg-gradient-to-r from-[#FDFBF7] from-30% via-[#FDFBF7]/50 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 left-0 w-[85%] md:w-[85%] lg:w-[70%] bg-gradient-to-r from-[#FDFBF7] from-50% via-[#FDFBF7]/50 to-transparent z-10 pointer-events-none"></div>
 
             {/* Side Navigation Dots */}
             <div className={`absolute left-[3%] top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-4 transition-all duration-1000 delay-700 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
@@ -95,7 +94,7 @@ const ServiceHero = () => {
                     {/* Buttons Area */}
                     <div className={`flex flex-wrap gap-4 md:gap-6 items-center transform transition-all duration-1000 delay-[1200ms] ease-out ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                         <Link 
-                            to="/book-appointment" 
+                            to="/appointment" 
                             className="inline-flex items-center gap-3 bg-[#4A1521] text-white px-8 md:px-10 py-4 md:py-5 text-[12px] md:text-[14px] font-bold tracking-[2px] uppercase border border-[#4A1521] rounded-[2px] hover:bg-transparent hover:text-[#4A1521] transition-all duration-300 shadow-lg hover:shadow-none hover:-translate-y-1"
                         >
                             BOOK APPOINTMENT 
@@ -105,7 +104,7 @@ const ServiceHero = () => {
                         </Link>
                         
                         <a 
-                            href="#collections" 
+                            href="/collections" 
                             className="text-[#4A1521] text-[12px] md:text-[13px] font-bold tracking-[2px] uppercase relative pb-1 hover:text-[#C8A97E] transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C8A97E] hover:after:bg-[#4A1521]"
                         >
                             VIEW COLLECTIONS

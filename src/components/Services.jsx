@@ -1,14 +1,46 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { Link } from 'react-router-dom'; // 🚨 FIX: Routing ke liye Link import kiya
 
 const Services = () => {
+  // 🚨 FIX: Har service ko uski 'id' de di hai taake dynamic page open ho sake
   const servicesData = [
-    { title: "Custom Stitching", desc: "Designed just for you, stitched to perfection.", icon: "/icon-1.png" },
-    { title: "Bridal Couture", desc: "Exquisite bridal wear for your special day.", icon: "/icon-2.png" },
-    { title: "Formal Wear", desc: "Elegant designs for every occasion.", icon: "/icon-3.png" },
-    { title: "Luxury Pret", desc: "Premium ready-to-wear with a luxury touch.", icon: "/icon-4.png" },
-    { title: "Alterations", desc: "Perfect fitting with flawless alterations.", icon: "/icon-5.png" },
-    { title: "Custom Measurements", desc: "Precision measurements for the perfect fit.", icon: "/icon-6.png" },
+    { 
+      id: "custom-stitching", 
+      title: "Custom Stitching", 
+      desc: "Designed just for you, stitched to perfection.", 
+      icon: "/icon-5.png" // 👈 Mannequin (Tailor Dummy) wala icon
+    },
+    { 
+      id: "bridal-couture", 
+      title: "Bridal Couture", 
+      desc: "Exquisite bridal wear for your special day.", 
+      icon: "/icon-2.png" // 👈 Bridal Gown (Bari Frock) wala icon
+    },
+    { 
+      id: "formal-wear", 
+      title: "Formal Wear", 
+      desc: "Elegant designs for every occasion.", 
+      icon: "/icon-3.png" // 👈 Simple A-Line Dress wala icon
+    },
+    { 
+      id: "luxury-pret", 
+      title: "Luxury Pret", 
+      desc: "Premium ready-to-wear with a luxury touch.", 
+      icon: "/icon-4.png" // 👈 Fabric Roll (Kapray ka roll) wala icon
+    },
+    { 
+      id: "casual-wear", 
+      title: "Casual Wear", 
+      desc: "Comfortable and stylish everyday luxury.", 
+      icon: "/icon-6.png" // 👈 Sewing Machine (Silai Machine) wala icon
+    },
+    { 
+      id: "western-collection", 
+      title: "Western Collection", 
+      desc: "Modern fashion tailored to perfection.", 
+      icon: "/icon-1.png" // 👈 Measuring Tape aur Dhaga wala icon
+    },
   ];
 
   // ==========================================
@@ -28,7 +60,6 @@ const Services = () => {
   });
 
   // 🌟 THE MAGIC FIX: Format Matching for Framer Motion 🌟
-  // Ab '0%' ki jagah 'calc(0% + 0vw)' likha hai taake library ko samajh aa jaye ke slide kaise karna hai
   const mobileXTransform = useTransform(
     smoothProgress, 
     [0, 1], 
@@ -39,12 +70,16 @@ const Services = () => {
   // REUSABLE CARD COMPONENT
   // ==========================================
   const ServiceCard = ({ service }) => (
-    <div className="group relative border border-[#C8A97E]/30 rounded-t-[100px] rounded-b-xl pt-20 pb-3 px-12 flex flex-col items-center bg-white shadow-[0_10px_30px_rgba(74,21,33,0.06)] transition-all duration-500 ease-out cursor-pointer hover:shadow-[0_20px_40px_rgba(200,169,126,0.2)] hover:-translate-y-2 hover:border-[#C8A97E] h-full w-full max-w-[280px] mx-auto">
+    // 🚨 FIX: div ko Link se replace kiya taake pura card clickable ho
+    <Link 
+      to={`/service/${service.id}`} 
+      className="group relative border border-[#C8A97E]/30 rounded-t-[100px] rounded-b-xl pt-20 pb-3 px-12 flex flex-col items-center bg-white shadow-[0_10px_30px_rgba(74,21,33,0.06)] transition-all duration-500 ease-out cursor-pointer hover:shadow-[0_20px_40px_rgba(200,169,126,0.2)] hover:-translate-y-2 hover:border-[#C8A97E] h-full w-full max-w-[280px] mx-auto block block"
+    >
       <div className="mb-4 h-30 w-30 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
         <img 
           src={service.icon} 
           alt={service.title}
-          className="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-sm"
+          className="h-16 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-sm"
           onError={(e) => {
             e.target.onerror = null;
             e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23C8A97E'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z'/%3E%3C/svg%3E";
@@ -57,7 +92,7 @@ const Services = () => {
       <p className="text-[11px] text-[#777777] leading-relaxed font-['Montserrat',sans-serif] text-center w-full group-hover:text-[#4A1521] transition-colors duration-300">
         {service.desc}
       </p>
-    </div>
+    </Link>
   );
 
   // ==========================================
@@ -133,9 +168,13 @@ const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <button className="border border-[#C8A97E] text-[#4A1521] bg-transparent px-10 py-4 text-[11px] font-bold tracking-[0.25em] uppercase hover:bg-[#4A1521] hover:text-white hover:border-[#4A1521] transition-all duration-500 rounded-sm shadow-sm hover:shadow-lg hover:-translate-y-1">
+          {/* 🚨 FIX: button ko Link se replace kiya */}
+          <Link 
+            to="/services" 
+            className="inline-block border border-[#C8A97E] text-[#4A1521] bg-transparent px-10 py-4 text-[11px] font-bold tracking-[0.25em] uppercase hover:bg-[#4A1521] hover:text-white hover:border-[#4A1521] transition-all duration-500 rounded-sm shadow-sm hover:shadow-lg hover:-translate-y-1"
+          >
             VIEW ALL SERVICES
-          </button>
+          </Link>
         </motion.div>
       </section>
 
@@ -164,9 +203,13 @@ const Services = () => {
 
           {/* Bottom Button */}
           <div className="mt-8 text-center px-[8vw] w-full">
-            <button className="w-full border border-[#C8A97E] text-[#4A1521] bg-transparent px-6 py-4 text-[10px] font-bold tracking-[0.25em] uppercase hover:bg-[#4A1521] hover:text-white transition-all duration-300 rounded-sm">
+            {/* 🚨 FIX: button ko Link se replace kiya */}
+            <Link 
+              to="/services" 
+              className="block w-full border border-[#C8A97E] text-[#4A1521] bg-transparent px-6 py-4 text-[10px] font-bold tracking-[0.25em] uppercase hover:bg-[#4A1521] hover:text-white transition-all duration-300 rounded-sm"
+            >
               VIEW ALL SERVICES
-            </button>
+            </Link>
           </div>
           
         </div>

@@ -99,51 +99,53 @@ const Terms = () => {
     setActiveSection(index);
     const element = document.getElementById(`section-${index}`);
     if (element) {
-      // Adjusted offset for sticky header if any
-      const y = element.getBoundingClientRect().top + window.scrollY - 100;
+      const y = element.getBoundingClientRect().top + window.scrollY - 120; // Thora sa offset adjust kiya hai
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
   return (
+    // 🚨 FIX 1: Yahan se 'overflow-x-hidden' hata diya hai taake Laptop par Footer lock rahay.
     <div className="bg-[#FDFBF7] min-h-screen font-['Montserrat',sans-serif]">
       
       {/* ==========================================
-                HERO SECTION (Full Page with Glass Box & Image 19)
-                ========================================== */}
-            <section className="relative w-full h-screen flex flex-col items-center justify-center pt-24 px-6 overflow-hidden">
-              
-              {/* Background Image - 100% Original Colors */}
-              <div className="absolute inset-0 z-0">
-                <img 
-                  src="/image21.png" 
-                  alt="Privacy Background" 
-                  className="w-full h-full object-cover object-center" 
-                />
-              </div>
-              
-              {/* Text Container - Transparent Glass Box */}
-              <motion.div 
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                className="relative z-10 max-w-4xl mx-auto text-center mt-12 md:mt-20 bg-white/40 backdrop-blur-md border border-white/50 p-10 md:p-16 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
-              >
-                <h1 className="font-['Cinzel',serif] text-5xl md:text-7xl lg:text-[80px] text-[#4A1521] font-bold mb-4 md:mb-6 leading-[1.1]">
-            TERMS & <br /> CONDITIONS
+          HERO SECTION (Full Page with Glass Box)
+          ========================================== */}
+      <section className="relative w-full h-screen flex flex-col items-center justify-center pt-24 px-4 md:px-6 overflow-hidden">
+        
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/image21.webp" 
+            alt="Privacy Background" 
+            className="w-full h-full object-cover object-center" 
+          />
+        </div>
+        
+        {/* Text Container - Transparent Glass Box */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          // 🚨 FIX 2: Mobile par box right side na bhage iske liye w-[90%] aur flex-col items-center use kiya hai
+          className="relative z-10 w-[90%] sm:w-auto max-w-4xl mx-auto flex flex-col items-center justify-center text-center mt-12 md:mt-20 bg-white/40 backdrop-blur-md border border-white/50 p-6 sm:p-10 md:p-16 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+        >
+          {/* 🚨 FIX 3: Text sizes adjust kiye aur break-words lagaya taake text limit mein rahay */}
+          <h1 className="font-['Cinzel',serif] text-[32px] sm:text-5xl md:text-6xl lg:text-[75px] text-[#4A1521] font-bold mb-4 md:mb-6 leading-[1.1] w-full break-words">
+            TERMS & <br className="hidden sm:block" /> CONDITIONS
           </h1>
           
-          <div className="flex items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8 opacity-90">
-            <div className="w-12 md:w-24 h-[2px] bg-[#4A1521]"></div>
+          <div className="flex items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8 opacity-90 w-full">
+            <div className="w-10 md:w-24 h-[2px] bg-[#4A1521]"></div>
             <div className="w-2 h-2 md:w-2.5 md:h-2.5 rotate-45 border-2 border-[#4A1521] flex items-center justify-center"><div className="w-1 h-1 bg-[#4A1521]"></div></div>
-            <div className="w-12 md:w-24 h-[2px] bg-[#4A1521]"></div>
+            <div className="w-10 md:w-24 h-[2px] bg-[#4A1521]"></div>
           </div>
           
-          <p className="text-[#4A1521] text-sm md:text-lg font-bold max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed">
+          <p className="text-[#4A1521] text-[13px] sm:text-sm md:text-lg font-bold max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed px-2">
             Transparency, trust, and professionalism are the foundation of every service we provide.
           </p>
 
-          <div className="inline-flex items-center gap-2 text-[#4A1521] font-bold text-[10px] md:text-sm tracking-[0.2em] uppercase bg-white/70 px-4 py-3 md:px-5 md:py-2.5 rounded-full border border-white/60 shadow-sm">
+          <div className="inline-flex items-center gap-2 text-[#4A1521] font-bold text-[9px] sm:text-[10px] md:text-sm tracking-[0.1em] sm:tracking-[0.2em] uppercase bg-white/70 px-4 py-3 md:px-5 md:py-2.5 rounded-full border border-white/60 shadow-sm whitespace-nowrap">
             <svg className="w-4 h-4 md:w-5 md:h-5 text-[#4A1521] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
             <span className="mt-0.5">Last Updated • July 29, 2026</span>
           </div>
@@ -156,12 +158,12 @@ const Terms = () => {
       <section className="py-16 md:py-24 px-4 md:px-12 lg:px-20 max-w-[1400px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           
-          {/* LEFT SIDEBAR (Sticky) - MOBILE PAR HIDE KAR DIYA HAI 'hidden lg:block' */}
+          {/* LEFT SIDEBAR (Sticky) - MOBILE PAR HIDE HAI */}
           <motion.aside 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="hidden lg:block lg:w-[25%] lg:sticky lg:top-24 bg-[#FDFBF7] border border-[#C8A97E]/30 rounded-xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)]"
+            className="hidden lg:block lg:w-[25%] lg:sticky lg:top-32 bg-[#FDFBF7] border border-[#C8A97E]/30 rounded-xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] z-10"
           >
             <h3 className="font-['Cinzel',serif] text-[#C8A97E] text-xl font-bold text-center mb-4 tracking-widest">
               CONTENTS
@@ -190,7 +192,7 @@ const Terms = () => {
             </ul>
           </motion.aside>
 
-          {/* RIGHT CONTENT CARDS - HAR POINT KE LIYE ALAG BOX (Mobile Aligned) */}
+          {/* RIGHT CONTENT CARDS */}
           <motion.main 
             variants={containerVariants}
             initial="hidden"
@@ -203,12 +205,11 @@ const Terms = () => {
                 key={index} 
                 id={`section-${index}`} 
                 variants={itemVariants}
-                className="scroll-mt-32 relative bg-white border border-[#C8A97E]/20 rounded-xl p-5 md:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(74,21,33,0.08)] hover:-translate-y-1 transition-all duration-500 overflow-hidden group"
+                className="scroll-mt-32 relative bg-white border border-[#C8A97E]/20 rounded-xl p-5 sm:p-7 md:p-10 shadow-[0_4px_15px_rgba(0,0,0,0.03)] hover:shadow-[0_10px_30px_rgba(74,21,33,0.08)] transition-all duration-500 overflow-hidden group"
               >
-                {/* Decorative Background Blur for Luxury Feel */}
-                <div className="absolute -right-8 -top-8 w-32 h-32 bg-[#C8A97E]/10 rounded-full blur-3xl group-hover:bg-[#C8A97E]/20 transition-colors duration-700"></div>
+                {/* Decorative Background Blur */}
+                <div className="absolute -right-8 -top-8 w-32 h-32 bg-[#C8A97E]/10 rounded-full blur-3xl group-hover:bg-[#C8A97E]/20 transition-colors duration-700 pointer-events-none"></div>
 
-                {/* FIX: flex-col ki jagah flex-row kar diya hai taake mobile par bhi side-by-side perfectly align rahay */}
                 <div className="flex flex-row gap-4 md:gap-8 items-start relative z-10">
                   
                   {/* Number Badge */}
@@ -219,15 +220,14 @@ const Terms = () => {
                   </div>
 
                   {/* Text Content */}
-                  <div className="flex-1">
+                  <div className="flex-1 overflow-hidden">
                     <h3 className="font-['Cinzel',serif] text-[#4A1521] group-hover:text-[#C8A97E] transition-colors duration-300 text-lg md:text-2xl font-bold mb-2 md:mb-3">
                       {item.title}
                     </h3>
                     
-                    {/* Animated Divider Line */}
                     <div className="w-10 md:w-12 h-[1px] bg-[#C8A97E]/50 mb-3 md:mb-4 group-hover:w-20 md:group-hover:w-24 group-hover:bg-[#C8A97E] transition-all duration-500"></div>
                     
-                    <p className="text-[#555555] leading-[1.7] md:leading-[1.8] text-[13px] md:text-[15px] text-justify md:text-left">
+                    <p className="text-[#555555] leading-[1.7] md:leading-[1.8] text-[13px] md:text-[15px] text-left">
                       {item.text}
                     </p>
                   </div>
@@ -238,9 +238,8 @@ const Terms = () => {
           </motion.main>
         </div>
 
-
         {/* ==========================================
-            NEED ASSISTANCE BANNER (Mobile Optimized)
+            NEED ASSISTANCE BANNER
             ========================================== */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -249,22 +248,18 @@ const Terms = () => {
           transition={{ duration: 0.8 }}
           className="mt-16 md:mt-24 border border-[#C8A97E]/30 shadow-[0_10px_40px_rgba(74,21,33,0.08)] rounded-xl overflow-hidden flex flex-col md:flex-row bg-[#FDFBF7] relative group"
         >
-          {/* Decorative Glow (Hidden on mobile, visible on desktop hover) */}
-          <div className="hidden md:block absolute -top-20 -left-20 w-40 h-40 bg-[#C8A97E]/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+          <div className="hidden md:block absolute -top-20 -left-20 w-40 h-40 bg-[#C8A97E]/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
 
-          {/* Left Image */}
           <div className="w-full md:w-[40%] lg:w-[45%] relative">
             <img 
               src="/image20.webp" 
               alt="Assistance" 
               className="w-full h-56 sm:h-72 md:h-full object-cover object-center"
             />
-            {/* Mobile Gradient Overlay - Image ko text section ke sath smoothly blend karne ke liye */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#FDFBF7] via-transparent to-transparent md:hidden"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FDFBF7] via-transparent to-transparent md:hidden pointer-events-none"></div>
           </div>
           
-          {/* Right Content */}
-          <div className="w-full md:w-[60%] lg:w-[55%] p-8 py-10 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center relative z-10">
+          <div className="w-full md:w-[60%] lg:w-[55%] p-6 sm:p-8 py-10 md:p-12 lg:p-16 flex flex-col justify-center items-center text-center relative z-10">
             <h3 className="font-['Cinzel',serif] text-[#4A1521] text-2xl md:text-3xl font-bold mb-3 md:mb-4">
               NEED ASSISTANCE?
             </h3>
@@ -279,17 +274,16 @@ const Terms = () => {
               If you have any questions regarding our policies or services, our team is always happy to assist you.
             </p>
             
-            {/* Buttons - Mobile par w-full aur sm/desktop par normal size */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center">
               <Link 
                 to="/contact" 
-                className="w-full sm:w-auto bg-[#4A1521] text-white px-8 py-3.5 text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-sm border border-[#4A1521] hover:bg-transparent hover:text-[#4A1521] active:scale-95 transition-all duration-300"
+                className="w-full sm:w-auto bg-[#4A1521] text-white px-8 py-3.5 text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-sm border border-[#4A1521] hover:bg-transparent hover:text-[#4A1521] active:scale-95 transition-all duration-300 flex justify-center items-center"
               >
                 CONTACT US
               </Link>
               <Link 
-                to="/book-appointment" 
-                className="w-full sm:w-auto bg-transparent text-[#C8A97E] px-8 py-3.5 text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-sm border border-[#C8A97E] hover:bg-[#C8A97E] hover:text-white active:scale-95 transition-all duration-300"
+                to="/appointment" 
+                className="w-full sm:w-auto bg-transparent text-[#C8A97E] px-8 py-3.5 text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase rounded-sm border border-[#C8A97E] hover:bg-[#C8A97E] hover:text-white active:scale-95 transition-all duration-300 flex justify-center items-center"
               >
                 BOOK APPOINTMENT
               </Link>

@@ -195,7 +195,7 @@ const Footer = () => {
         <div className="max-w-[1500px] mx-auto px-6 md:px-10 py-5 flex flex-col md:flex-row items-center justify-between text-[11px] md:text-[12px] text-[#D3C5C8] tracking-wider font-medium">
           <p>© 2026 Zarvix Digital. All Rights Reserved.</p>
           <div className="flex gap-4 mt-3 md:mt-0">
-            <Link to="/PrivacyPolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/Terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>

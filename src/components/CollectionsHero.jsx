@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const CollectionsHero = () => {
+    // Mount state for high-performance pure CSS animations
     const [isMounted, setIsMounted] = useState(false);
 
     useEffect(() => {
@@ -11,73 +12,78 @@ const CollectionsHero = () => {
 
     return (
         <section 
-            // 🚨 FIX: "h-[85vh]" hata kar "min-h-screen" aur "py-28 lg:py-0" lagaya hai 
-            // taake mobile par content ke hisab se height khud adjust ho.
-            className="relative w-full min-h-screen py-28 lg:py-0 bg-cover bg-[75%_center] lg:bg-right bg-no-repeat flex items-center font-['Montserrat',sans-serif] overflow-hidden"
+            // h-[100dvh] for perfect mobile viewport handling, minimum 650px height
+            className="relative w-full h-[100dvh] min-h-[650px] bg-cover bg-[75%_center] md:bg-right bg-no-repeat flex items-center font-['Montserrat',sans-serif] overflow-hidden"
             style={{ backgroundImage: "url('/image28.webp')" }}
         >
             
-            {/* Gradient Overlay */}
-            <div className="absolute inset-y-0 left-0 w-full md:w-[85%] lg:w-[65%] bg-gradient-to-r from-[#FDFBF7] via-[#FDFBF7]/90 to-transparent z-10 pointer-events-none"></div>
+            {/* 
+              Gradient Overlay
+              🚨 FIX: Gradient ko perfect balance kiya hai (from-30% aur via-80%). 
+              Is se paragraph bilkul clear parha jayega aur right side par dress bhi nazar aayegi.
+            */}
+            <div className="absolute inset-y-0 left-0 w-full md:w-[85%] lg:w-[65%] bg-gradient-to-r from-[#FDFBF7] from-[30%] md:from-[40%] via-[#FDFBF7]/80 md:via-[#FDFBF7]/90 to-transparent z-10 pointer-events-none"></div>
 
-            {/* Side Navigation Dots */}
+            {/* Side Navigation Dots matching desktop image */}
             <div className={`absolute left-[3%] top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col items-center gap-4 transition-all duration-1000 delay-700 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
                 <div className="w-1.5 h-1.5 rounded-full bg-[#C8A97E]"></div>
                 <div className="w-1.5 h-1.5 rounded-full bg-[#4A1521]"></div>
-                <div className="w-[1px] h-20 bg-[#C8A97E]/50"></div>
+                <div className="w-[1px] h-16 xl:h-20 bg-[#C8A97E]/50"></div>
             </div>
 
             {/* Hero Content Wrapper */}
-            <div className="relative z-20 w-full px-6 md:px-16 lg:px-24 flex items-center">
-                <div className="max-w-[600px] flex flex-col items-start mt-6 md:mt-12">
+            <div className="relative z-20 w-full pt-20 md:pt-28 lg:pt-16 px-6 md:px-16 lg:px-24 flex items-center h-full">
+                <div className="max-w-[650px] flex flex-col items-start my-auto w-full">
                     
                     {/* Main Heading */}
                     <div className={`transform transition-all duration-1000 ease-out ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-                        <h1 className="font-['Cinzel',serif] text-[45px] md:text-[65px] lg:text-[75px] leading-tight text-[#4A1521] font-bold m-0 tracking-wide">
+                        <h1 className="font-['Cinzel',serif] text-[40px] sm:text-[48px] md:text-[65px] lg:text-[75px] xl:text-[85px] leading-[1.05] text-[#4A1521] font-bold m-0 tracking-tight drop-shadow-sm">
                             COLLECTIONS
                         </h1>
                     </div>
                     
                     {/* Sub Heading */}
                     <div className={`transform transition-all duration-1000 delay-150 ease-out ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-                        <h2 className="font-['Cinzel',serif] text-[14px] md:text-[18px] lg:text-[20px] text-[#C8A97E] tracking-widest font-bold uppercase mt-2 mb-4">
-                            Timeless Designs, Crafted For Every Occasion
+                        <h2 className="font-['Cinzel',serif] text-[11px] md:text-[16px] lg:text-[18px] text-[#C8A97E] tracking-[0.25em] md:tracking-[0.3em] font-bold uppercase mt-2 mb-3 md:mt-4 md:mb-4 leading-[1.6] drop-shadow-sm">
+                            TIMELESS DESIGNS, CRAFTED FOR <br className="block md:hidden" /> EVERY OCCASION
                         </h2>
                     </div>
 
-                    {/* Ornamental Divider */}
-                    <div className={`flex items-center gap-3 w-[150px] md:w-[200px] mb-6 transform transition-all duration-1000 delay-300 ease-out ${isMounted ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'} origin-left`}>
-                        <div className="h-[1px] bg-[#C8A97E]/60 flex-grow"></div>
-                        <div className="flex gap-1 items-center justify-center text-[#C8A97E]">
+                    {/* Signature Ornamental Divider */}
+                    <div className={`flex items-center gap-3 w-[160px] md:w-[220px] mb-5 md:mb-8 mt-1 transform transition-all duration-1000 delay-300 ease-out ${isMounted ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0'} origin-left`}>
+                        <div className="h-[1px] bg-[#C8A97E] flex-grow shadow-sm"></div>
+                        <div className="flex gap-1 items-center justify-center text-[#C8A97E] drop-shadow-sm">
                             <div className="w-1.5 h-1.5 rotate-45 bg-[#C8A97E]"></div>
                             <div className="w-2 h-2 rotate-45 bg-[#C8A97E]"></div>
                             <div className="w-1.5 h-1.5 rotate-45 bg-[#C8A97E]"></div>
                         </div>
-                        <div className="h-[1px] bg-[#C8A97E]/60 flex-grow"></div>
+                        <div className="h-[1px] bg-[#C8A97E] flex-grow shadow-sm"></div>
                     </div>
 
-                    {/* Description */}
+                    {/* Description Paragraph */}
+                    {/* 🚨 FIX: Paragraph ab mobile par show hoga (hidden hata diya). 
+                        Font size aur spacing mobile ke hisab se adjust ki hai taake elegant lagay. */}
                     <div className={`transform transition-all duration-1000 delay-500 ease-out ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-                        <p className="text-[#555555] text-[14px] md:text-[15px] leading-[1.8] font-medium m-0 mb-8 max-w-[550px]">
+                        <p className="text-[#555555] text-[12.5px] sm:text-[13.5px] md:text-[15px] leading-[1.7] md:leading-[1.8] font-medium m-0 mb-6 md:mb-8 max-w-[90%] md:max-w-[550px] text-left pr-2 md:pr-0 drop-shadow-sm">
                             Discover a curated collection of handcrafted garments where timeless elegance meets exceptional craftsmanship. From breathtaking bridal couture to sophisticated everyday wear, every piece is tailored with precision and passion.
                         </p>
                     </div>
                     
                     {/* Buttons Area */}
-                    <div className={`flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto transform transition-all duration-1000 delay-[700ms] ease-out ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                    <div className={`flex flex-col sm:flex-row gap-3.5 md:gap-5 w-full md:w-auto transform transition-all duration-1000 delay-[700ms] ease-out ${isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                         
                         {/* Primary Button */}
                         <a 
                             href="#featured-collections" 
-                            className="inline-flex justify-center items-center gap-3 bg-[#4A1521] text-white px-8 md:px-10 py-4 text-[12px] md:text-[13px] font-bold tracking-[2px] uppercase border border-[#4A1521] hover:bg-transparent hover:text-[#4A1521] transition-all duration-300 shadow-md hover:shadow-none"
+                            className="inline-flex justify-center items-center bg-[#4A1521] text-white px-8 md:px-10 py-3.5 md:py-4 text-[11px] md:text-[13px] font-bold tracking-[2px] uppercase border border-[#4A1521] hover:bg-transparent hover:text-[#4A1521] transition-all duration-300 shadow-md hover:shadow-none w-[90%] max-w-[320px] sm:max-w-none sm:w-auto text-center"
                         >
                             EXPLORE COLLECTIONS 
                         </a>
                         
                         {/* Secondary Button */}
                         <Link 
-                            to="/contact" 
-                            className="inline-flex justify-center items-center gap-3 bg-transparent text-[#4A1521] px-8 md:px-10 py-4 text-[12px] md:text-[13px] font-bold tracking-[2px] uppercase border border-[#4A1521] hover:bg-[#4A1521] hover:text-white transition-all duration-300"
+                            to="/appointment" 
+                            className="inline-flex justify-center items-center bg-transparent text-[#4A1521] px-8 md:px-10 py-3.5 md:py-4 text-[11px] md:text-[13px] font-bold tracking-[2px] uppercase border border-[#4A1521] hover:bg-[#4A1521] hover:text-white transition-all duration-300 w-[90%] max-w-[320px] sm:max-w-none sm:w-auto text-center backdrop-blur-sm md:backdrop-blur-none"
                         >
                             BOOK APPOINTMENT
                         </Link>
@@ -85,6 +91,14 @@ const CollectionsHero = () => {
 
                 </div>
             </div>
+            
+            {/* Bottom Mouse Scroll Indicator */}
+            <div className={`absolute bottom-4 lg:bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 cursor-pointer transition-opacity duration-1000 delay-[1200ms] hidden md:flex ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+                <div className="w-[18px] h-[28px] border-[1.5px] border-[#4A1521] rounded-full relative flex justify-center p-1 opacity-60 hover:opacity-100 transition-opacity">
+                    <div className="w-[2px] h-[5px] bg-[#4A1521] rounded-full animate-bounce mt-1"></div>
+                </div>
+            </div>
+
         </section>
     );
 };
