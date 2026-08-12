@@ -4,11 +4,8 @@ export const collectionsData = {
         title: "BRIDAL WEAR",
         subtitle: "The Royal Collection",
         description: "Explore our exclusive handcrafted bridal masterpieces. Every dress is a unique story of elegance, tradition, and luxury.",
-        coverImg: "/image6.webp", 
-        images: [
-            "/g1.webp", "/g2.webp", "/g3.webp",
-            "/g4.webp", "/g5.webp", "/g6.webp"
-        ] 
+        coverImg: "/image6.webp",
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "luxury-pret": {
         id: "luxury-pret",
@@ -16,11 +13,7 @@ export const collectionsData = {
         subtitle: "Ready to Wear Elegance",
         description: "Sophisticated ready-to-wear designs that perfectly balance traditional artistry and modern contemporary aesthetics.",
         coverImg: "/image9.webp",
-        images: [
-            "/p1.webp", "/p2.webp", "/p3.webp",
-            "/p4.webp", "/p5.webp", "/p6.webp",
-            "/p7.webp", "/p8.webp"
-        ]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "formal-wear": {
         id: "formal-wear",
@@ -28,21 +21,16 @@ export const collectionsData = {
         subtitle: "Timeless Occasion Wear",
         description: "Elegant evening ensembles and perfectly tailored formals designed to make you stand out at every luxury occasion.",
         coverImg: "/image7.webp",
-        images: [
-            "/f1.webp", "/f2.webp", "/f3.webp",
-            "/f4.webp"
-        ]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
+
     "casual-wear": {
         id: "casual-wear",
         title: "CASUAL WEAR",
         subtitle: "Everyday Luxury",
         description: "Comfortable, premium everyday outfits blending effortless style with uncompromising fabric quality and perfect fit.",
         coverImg: "/image8.png",
-        images: [
-            "/c1.png", "/c2.png", "/c3.png",
-            "/c4.png", "/c5.png"
-        ]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "wedding-couture": {
         id: "wedding-couture",
@@ -50,7 +38,7 @@ export const collectionsData = {
         subtitle: "Signature Bridal Excellence",
         description: "Step into a world of majestic bridal wear tailored for your big day with unmatched luxury and details.",
         coverImg: "/image13.webp",
-        images: ["/image1.webp", "/image2.webp"] 
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "eid-collection": {
         id: "eid-collection",
@@ -58,7 +46,7 @@ export const collectionsData = {
         subtitle: "Festive Ready to Wear",
         description: "Celebrate festivities in style with our exclusive Eid collection, featuring vibrant colors and elegant cuts.",
         coverImg: "/image12.webp",
-        images: ["/image3.webp", "/image4.webp"] 
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "party-wear": {
         id: "party-wear",
@@ -66,7 +54,7 @@ export const collectionsData = {
         subtitle: "Glamorous Evening Attire",
         description: "Turn heads at every event with our glamorous party wear designed for modern sophistication.",
         coverImg: "/image10.webp",
-        images: ["/image5.webp", "/image6.webp"] 
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "western-collection": {
         id: "western-collection",
@@ -74,18 +62,17 @@ export const collectionsData = {
         subtitle: "Contemporary Luxury",
         description: "Modern fashion tailored to perfection with chic and contemporary western silhouettes.",
         coverImg: "/image29.webp",
-        images: ["/image7.webp", "/image8.webp"] 
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
-    
     // 👇 Naye add kiye gaye collections (Inner Pages ke liye)
-    
+
     "everyday-elegance": {
         id: "everyday-elegance",
         title: "EVERYDAY ELEGANCE",
         subtitle: "Redefining Daily Sophistication",
         description: "Who says everyday wear cannot be luxurious? Crafted for the modern individual who seeks comfort without compromising on style.",
         coverImg: "/image15.webp",
-        images: ["/image15.webp", "/image8.png", "/image7.webp"]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "luxury-formals": {
         id: "luxury-formals",
@@ -93,7 +80,7 @@ export const collectionsData = {
         subtitle: "Make A Statement",
         description: "Step into the spotlight with our Luxury Formals. Designed for high-end events featuring rich fabrics and intricate hand-embellishments.",
         coverImg: "/image12.webp",
-        images: ["/image12.webp", "/image11.webp", "/image13.webp"]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "signature-pret": {
         id: "signature-pret",
@@ -101,7 +88,7 @@ export const collectionsData = {
         subtitle: "Ready-To-Wear Perfection",
         description: "The epitome of contemporary chic. Featuring ready-to-wear ensembles that blend traditional artistry with modern cuts.",
         coverImg: "/image14.webp",
-        images: ["/image14.webp", "/image9.webp", "/image10.webp"]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "festive-collection": {
         id: "festive-collection",
@@ -109,7 +96,7 @@ export const collectionsData = {
         subtitle: "Celebrate In Grandeur",
         description: "Festivities demand extraordinary attire. Vibrant colors, festive embroideries, and luxurious detailing to make your celebrations truly memorable.",
         coverImg: "/image10.webp",
-        images: ["/image10.webp", "/image11.webp", "/image6.webp"]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "boutique-collection": {
         id: "boutique-collection",
@@ -117,7 +104,7 @@ export const collectionsData = {
         subtitle: "Exclusive Limited Editions",
         description: "Exclusive, limited-edition pieces curated specially for boutiques and the ultimate fashion-forward wardrobe.",
         coverImg: "/image31.webp",
-        images: ["/image31.webp", "/b1.webp", "/b2.webp"]
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
     },
     "luxury-embroidery": {
         id: "luxury-embroidery",
@@ -125,6 +112,6 @@ export const collectionsData = {
         subtitle: "Artisanal Craftsmanship",
         description: "Showcasing breathtaking intricate threadwork, delicate beadwork, and masterful artisanal craftsmanship.",
         coverImg: "/image30.png",
-        images: ["/image30.png", "/le1.webp", "/le2.webp"]
-    }
+        images: ["/collection1.png", "/collection2.png", "/collection3.png", "/collection4.png", "/collection5.png", "/collection6.png", "/collection7.png", "/collection8.png", "/collection9.png", "/collection10.png", "/collection11.png", "/collection12.png", "/collection13.png", "/collection14.png", "/collection15.png",]
+    },
 };

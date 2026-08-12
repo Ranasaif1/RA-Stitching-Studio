@@ -60,7 +60,7 @@ export const servicesData = {
         title: "BRIDAL COUTURE",
         subtitle: "Bespoke Luxury - Where Your Dream Bridal Dress Becomes Reality",
         heroDesc: "Your wedding day is one of life's most treasured moments, and your bridal outfit should be nothing less than extraordinary. At Rana Abdullah Stitching Studio, we specialize in creating bespoke bridal couture that celebrates elegance, individuality, and timeless craftsmanship. Every bridal ensemble is handcrafted with passion using luxurious fabrics, intricate embroidery, delicate embellishments, and precision tailoring to create a masterpiece that reflects your unique story. With a proud family legacy spanning more than 30 years, we combine traditional tailoring techniques with modern couture artistry to ensure every bride walks into her special day with confidence, grace, and unforgettable beauty.",
-        heroImg: "/image7.webp",
+        heroImg: "/image13.webp",
         
         aboutTitle: "A Bridal Experience Designed Around You",
         aboutDesc1: "Every bride has a different vision, and every wedding deserves a gown that is as unique as the woman wearing it. Our bridal couture journey begins with understanding your personality, wedding theme, cultural traditions, and style preferences. We believe the perfect bridal dress is not selected—it is carefully designed and handcrafted exclusively for you.",
@@ -178,7 +178,7 @@ export const servicesData = {
         title: "CUSTOM STITCHING",
         subtitle: "Made for You - Tailored to Your Style. Crafted to Perfection.",
         heroDesc: "Every individual has a unique personality, and every outfit should reflect that uniqueness. At Rana Abdullah Stitching Studio, our Custom Stitching service is designed to transform your ideas into beautifully handcrafted garments tailored exclusively for you. Whether you have a specific design in mind, a favorite fabric, or inspiration from a fashion collection, our experienced designers and master tailors bring your vision to life with precision, elegance, and exceptional craftsmanship. With over 30 years of tailoring excellence, we combine traditional techniques with modern fashion to create garments that fit perfectly, feel comfortable, and showcase timeless sophistication.",
-        heroImg: "/image27.webp",
+        heroImg: "/image26.webp",
         
         aboutTitle: "Your Vision. Our Craftsmanship.",
         aboutDesc1: "At Rana Abdullah Stitching Studio, we believe true luxury lies in personalization. Our Custom Stitching service begins with understanding your ideas, lifestyle, occasion, and fashion preferences before carefully planning every detail of your garment.",
@@ -238,7 +238,7 @@ export const servicesData = {
         title: "CASUAL WEAR",
         subtitle: "Everyday Luxury - Effortless Style for Everyday Living",
         heroDesc: "True elegance isn't reserved only for special occasions—it should be a part of your everyday life. At Rana Abdullah Stitching Studio, our Casual Wear collection is thoughtfully designed for women who appreciate comfort, quality, and timeless fashion. Every outfit is tailored to provide the perfect balance between relaxed wearability and refined sophistication, allowing you to feel confident wherever your day takes you. With over 30 years of tailoring excellence, we transform everyday clothing into premium garments using carefully selected fabrics, precise tailoring, and exceptional finishing. Whether you're spending time with family, attending casual gatherings, running daily errands, or simply enjoying a comfortable day out, our casual wear is designed to make every moment stylish and effortless.",
-        heroImg: "/image13.webp",
+        heroImg: "/image7.webp",
         
         aboutTitle: "Designed for Comfort. Crafted with Elegance.",
         aboutDesc1: "At Rana Abdullah Stitching Studio, we believe everyday fashion deserves the same attention to detail as luxury couture. Our Casual Wear collection combines breathable premium fabrics, clean silhouettes, and flawless tailoring to create garments that are both practical and sophisticated.",
