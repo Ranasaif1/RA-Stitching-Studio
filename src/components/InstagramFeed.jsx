@@ -2,13 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const InstagramFeed = () => {
+  // 🚨 FIX: Naye links ko specific images ke sath attach kar diya hai
   const feedImages = [
-    { img: "/image9.webp", likes: "1.2k" },
-    { img: "/image4.webp", likes: "950" },
-    { img: "/image5.webp", likes: "2.1k" },
-    { img: "/image6.webp", likes: "1.8k" },
-    { img: "/image7.webp", likes: "3.4k" },
-    { img: "/image8.png", likes: "890" },
+    { img: "/image9.webp", likes: "1.2k", link: "https://www.instagram.com/reel/DcHL9KOsl2T/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { img: "/image4.webp", likes: "950", link: "https://www.instagram.com/reel/Db-bq7aBS6r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { img: "/image5.webp", likes: "2.1k", link: "https://www.instagram.com/reel/Db-boHYheKl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { img: "/image6.webp", likes: "1.8k", link: "https://www.instagram.com/reel/Db-bl1jB-bK/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { img: "/image7.webp", likes: "3.4k", link: "https://www.instagram.com/reel/Db-baWOsn5q/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { img: "/image8.png", likes: "890", link: "https://www.instagram.com/p/DbVLt2-sROM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
   ];
 
   const instaUrl = "https://www.instagram.com/ranaabdullah.studio/";
@@ -73,7 +74,8 @@ const InstagramFeed = () => {
         {feedImages.map((item, i) => (
           <motion.a 
             key={i}
-            href={instaUrl}
+            // 🚨 FIX: Ab card par click karne se us specific post/reel par jayega
+            href={item.link}
             target="_blank"
             rel="noopener noreferrer"
             variants={{

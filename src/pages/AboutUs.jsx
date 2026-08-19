@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import AboutHero from '../components/AboutHero';
 import OurStory from '../components/OurStory';
-import WhyChooseUs from '../components/WhyChooseUs';
+import WhyChooseUs from '../components/ServiceWhyChooseUs';
 import MissionVision from '../components/MissionVision';
 import AboutStats from '../components/AboutStats';
 import AboutQuote from '../components/AboutQuote';
@@ -13,8 +13,10 @@ const AboutUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
-    <div className="bg-[#FDFBF7] font-['Montserrat',sans-serif] text-[#555555]">
+    // 🚨 FIX: "w-full overflow-hidden relative" add kiya hai taake horizontal scroll aur white gap hamesha ke liye khatam ho jaye.
+    <div className="relative w-full overflow-hidden bg-[#FDFBF7] font-['Montserrat',sans-serif] text-[#555555]">
 
       {/* Signature Font Import */}
       <style>

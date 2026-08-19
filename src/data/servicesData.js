@@ -361,7 +361,7 @@ export const servicesData = {
         aboutTitle: "Designed for the Modern Woman",
         aboutDesc1: "Our Western Collection is created for women who want fashion that reflects confidence, sophistication, and effortless elegance. Every design is tailored according to your personal style, body measurements, and the occasion you're dressing for. Whether you're attending a corporate event, engagement party, graduation ceremony, formal dinner, birthday celebration, or simply refreshing your wardrobe, our experienced designers work closely with you to create garments that perfectly complement your personality.",
         aboutDesc2: "From clean minimalist silhouettes to statement evening gowns with luxurious detailing, every outfit reflects our commitment to exceptional craftsmanship, premium quality, and timeless design.",
-        aboutImg: "/image29.webp",
+        aboutImg: "/image32.png",
 
         whyChooseTitle: "Why Choose Our Western Collection",
         whyChooseUs: [
